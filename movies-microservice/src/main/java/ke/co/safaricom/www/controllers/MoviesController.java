@@ -9,9 +9,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
-import java.io.IOException;
 import java.util.Date;
-import java.util.logging.Level;
 import ke.co.safaricom.www.entities.Movies;
 import ke.co.safaricom.www.entities.Users;
 import ke.co.safaricom.www.entities.services.MoviesService;
@@ -77,30 +75,20 @@ public class MoviesController {
             @ApiResponse(code = 417, message = "Provided parameters, do not match specified dependencies.", response = SwaggerDocErrorResponseMessages.class),
             @ApiResponse(code = 500, message = "Internal server error") })
     @PostMapping(value = "/register")
-    private ResponseEntity<ResponseWrapper> registerUser(@RequestBody String userRegistrationRequest) {
-        try {
-            logger.info("REGISTRATION REQUEST RECEIVED.");
-            UserValidator validate = new UserValidator();
-            ResponseWrapper response = validate.validateUserRegistration(userRegistrationRequest, userService);
-            
-            if (validate.isIsValid()) {
-                validate.getUsers().setPassword(bCryptPasswordEncoder.encode(validate.getUsers().getPassword()));
-                String msidn = validate.formatMsisdn(validate.getUsers().getMsisdn());
-                validate.getUsers().setMsisdn(msidn);
-                Users savedUser = userService.saveUser(validate.getUsers());
-                response.setObject(savedUser);
-            }
-            
-            return new ResponseEntity<>(response, response.getHttpStatus());
-        } catch (IOException ex) {
-            ResponseWrapper response = new ResponseWrapper();
-            response.setHttpStatus(HttpStatus.INTERNAL_SERVER_ERROR);
-            response.setResponseMessage(ITERNAL_SERVER_ERROR_RESPONSE_MESSAGE);
-            response.setResponseCode(HttpStatus.INTERNAL_SERVER_ERROR.value());            
-            
-            return new ResponseEntity<>(response, response.getHttpStatus());
+    private ResponseEntity<ResponseWrapper> registerUser(@RequestBody Users userRegistrationRequest) {
+        logger.info("REGISTRATION REQUEST RECEIVED.");
+        UserValidator validate = new UserValidator();
+        ResponseWrapper response = validate.validateUserRegistration(userRegistrationRequest, userService);
 
+        if (validate.isIsValid()) {
+            userRegistrationRequest.setPassword(bCryptPasswordEncoder.encode(userRegistrationRequest.getPassword()));
+            String msidn = validate.formatMsisdn(userRegistrationRequest.getMsisdn());
+            userRegistrationRequest.setMsisdn(msidn);
+            Users savedUser = userService.saveUser(userRegistrationRequest);
+            response.setObject(savedUser);
         }
+
+        return new ResponseEntity<>(response, response.getHttpStatus());
 
     }
     
@@ -116,33 +104,24 @@ public class MoviesController {
             @ApiResponse(code = 417, message = "Provided parameters, do not match specified dependencies.", response = SwaggerDocErrorResponseMessages.class),
             @ApiResponse(code = 500, message = "Internal server error") })
     @PostMapping(value = "/add")
-    private ResponseEntity<ResponseWrapper> addMovie(@RequestBody String moviesRequest) {
-        try {
-            logger.info("MOVIE ADDITION REQUEST RECEIVED.");
-            MoviesValidator validate = new MoviesValidator();
-            ResponseWrapper response = validate.validateMovieRequest(moviesRequest, moviesService, POST);
+    private ResponseEntity<ResponseWrapper> addMovie(@RequestBody Movies moviesRequest) {
+        logger.info("MOVIE ADDITION REQUEST RECEIVED.");
+        MoviesValidator validate = new MoviesValidator();
+        ResponseWrapper response = validate.validateMovieRequest(moviesRequest, moviesService, POST);
+
+        if (validate.isIsValid()) {
+              
+            Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+            UserDetails user = (UserDetails) auth.getPrincipal();
             
-            if (validate.isIsValid()) {
-                
-                Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-                UserDetails user = (UserDetails) auth.getPrincipal();
-                
-                validate.getMovies().setAddDate(new Date());
-                validate.getMovies().setTitle(validate.getMovies().getTitle().toUpperCase().trim());
-                validate.getMovies().setAddedBy(user.getUsername());
-                Movies savedMovie = moviesService.saveMovies(validate.getMovies());
-                response.setObject(savedMovie);
-            }
-            
-            return new ResponseEntity<>(response, response.getHttpStatus());
-        } catch (IOException ex) {
-            ResponseWrapper response = new ResponseWrapper();
-            response.setHttpStatus(HttpStatus.INTERNAL_SERVER_ERROR);
-            response.setResponseMessage(ITERNAL_SERVER_ERROR_RESPONSE_MESSAGE);
-            response.setResponseCode(HttpStatus.INTERNAL_SERVER_ERROR.value());            
-            
-            return new ResponseEntity<>(response, response.getHttpStatus());
+            moviesRequest.setAddDate(new Date());
+            moviesRequest.setTitle(moviesRequest.getTitle().toUpperCase().trim());
+            moviesRequest.setAddedBy(user.getUsername());
+            Movies savedMovie = moviesService.saveMovies(moviesRequest);
+            response.setObject(savedMovie);
         }
+
+        return new ResponseEntity<>(response, response.getHttpStatus());
     }
     
     @ApiOperation(value = "Send Update Movie Request", notes = "Use this API to send a Movie updating request. As specified in the documentation"
@@ -157,38 +136,29 @@ public class MoviesController {
             @ApiResponse(code = 417, message = "Provided parameters, do not match specified dependencies.", response = SwaggerDocErrorResponseMessages.class),
             @ApiResponse(code = 500, message = "Internal server error") })
     @PutMapping(value = "/update")
-    private ResponseEntity<ResponseWrapper> updateMovie(@RequestBody String moviesRequest) {
-        try {
-            logger.info("MOVIE UPDATE REQUEST RECEIVED.");
-            MoviesValidator validate = new MoviesValidator();
-            ResponseWrapper response = validate.validateMovieRequest(moviesRequest, moviesService, PUT);
+    private ResponseEntity<ResponseWrapper> updateMovie(@RequestBody Movies moviesRequest) {
+        logger.info("MOVIE UPDATE REQUEST RECEIVED.");
+        MoviesValidator validate = new MoviesValidator();
+        ResponseWrapper response = validate.validateMovieRequest(moviesRequest, moviesService, PUT);
+
+        if (validate.isIsValid()) {
+              
+            Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+            UserDetails user = (UserDetails) auth.getPrincipal();
             
-            if (validate.isIsValid()) {
-                
-                Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-                UserDetails user = (UserDetails) auth.getPrincipal();
-                
-                validate.getMovies().setMovieId(validate.getMovies().getMovieId());
-                validate.getMovies().setUpdatedDate(new Date());
-                validate.getMovies().setTitle(validate.getMovies().getTitle().toUpperCase().trim());
-                validate.getMovies().setUpdatedBy(user.getUsername());
-                
-                moviesService.saveMovies(validate.getMovies());
-                
-                response.setObject(moviesService.searchMovieByTitle(validate.getMovies().getTitle()));
-                response.setHttpStatus(HttpStatus.OK);
-                response.setResponseCode(HttpStatus.OK.value());
-                response.setResponseMessage(OBJECT_UPDATED_RESPONSE_MESSAGE);
-            }
-            return new ResponseEntity<>(response, response.getHttpStatus());
-        } catch (IOException ex) {
-            ResponseWrapper response = new ResponseWrapper();
-            response.setHttpStatus(HttpStatus.INTERNAL_SERVER_ERROR);
-            response.setResponseMessage(ITERNAL_SERVER_ERROR_RESPONSE_MESSAGE);
-            response.setResponseCode(HttpStatus.INTERNAL_SERVER_ERROR.value());            
+            moviesRequest.setMovieId(validate.getMovies().getMovieId());
+            moviesRequest.setUpdatedDate(new Date());
+            moviesRequest.setTitle(moviesRequest.getTitle().toUpperCase().trim());
+            moviesRequest.setUpdatedBy(user.getUsername());
             
-            return new ResponseEntity<>(response, response.getHttpStatus());
+            moviesService.saveMovies(moviesRequest);
+            
+            response.setObject(moviesService.searchMovieByTitle(moviesRequest.getTitle()));
+            response.setHttpStatus(HttpStatus.OK);
+            response.setResponseCode(HttpStatus.OK.value());
+            response.setResponseMessage(OBJECT_UPDATED_RESPONSE_MESSAGE);
         }
+        return new ResponseEntity<>(response, response.getHttpStatus());
     }
     
     @ApiOperation(value = "Send Delete Movie Request", notes = "Use this API to send a Movie Delete request. As specified in the documentation"

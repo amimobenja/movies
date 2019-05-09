@@ -5,8 +5,6 @@
  */
 package ke.co.safaricom.www.validators;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import java.io.IOException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import ke.co.safaricom.www.entities.Users;
@@ -27,20 +25,10 @@ public class UserValidator {
     
     private static final Logger logger = LogManager.getLogger(UserValidator.class);
     private boolean isValid;
-    private Users users;
     
-    public ResponseWrapper validateUserRegistration(String usersRequest, UserService userService) throws IOException { 
+    public ResponseWrapper validateUserRegistration(Users users, UserService userService) { 
         logger.debug(" - Starting the validation process.");       
         ResponseWrapper response = new ResponseWrapper();
-        if (checkFields(usersRequest, Users.class)) {
-            response.setHttpStatus(HttpStatus.BAD_REQUEST);
-            response.setResponseMessage(BAD_PARAMS_RESPONSE_MESSAGE);
-            response.setResponseCode(HttpStatus.BAD_REQUEST.value());
-            
-            return response;
-        }
-        
-        Users users = (Users) convertToEntity(usersRequest, Users.class);
         
         String msidn = formatMsisdn(users.getMsisdn());
         if (msidn.equals("")) {
@@ -71,7 +59,6 @@ public class UserValidator {
         
         logger.debug(" - Entity Object is valid.");
         setIsValid(true);
-        setUsers(users);
         response.setHttpStatus(HttpStatus.CREATED);
         response.setResponseMessage(OBJECT_CREATED_RESPONSE_MESSAGE);
         response.setResponseCode(HttpStatus.CREATED.value());
@@ -86,14 +73,7 @@ public class UserValidator {
     public void setIsValid(boolean isValid) {
         this.isValid = isValid;
     }
-
-    public Users getUsers() {
-        return users;
-    }
-
-    public void setUsers(Users users) {
-        this.users = users;
-    }
+    
     
     private boolean isValidInput(String inputStr, String expression) {
         Pattern pattern = Pattern.compile(expression, Pattern.CASE_INSENSITIVE);
@@ -113,25 +93,6 @@ public class UserValidator {
             formatedMsisdn = "254" + msisdn;
         }
         return formatedMsisdn;
-    }
-    
-    public boolean checkFields(String obj, Class t) {
-        boolean mapped;
-        try {
-            ObjectMapper mapper = new ObjectMapper();
-            mapper.readValue(obj, t);
-
-            mapped = true;
-        } catch (IOException ex) {
-            mapped = false;
-        }
-
-        return !mapped;
-    }
-
-    public static Object convertToEntity(String obj, Class t) throws IOException {
-        ObjectMapper mapper = new ObjectMapper();
-        return mapper.readValue(obj, t);
     }
     
     

@@ -28,7 +28,6 @@ public class Movies implements Serializable {
     
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @ApiModelProperty(notes = "The userId parameter that is not mandatory, as the API will generate it.", required = false)
     private int movieId;
     @NotNull(message = "The title cannot be empty.")
     @ApiModelProperty(notes = "The title parameter is mandatory as it's used to identify a specific movie. "
@@ -58,17 +57,9 @@ public class Movies implements Serializable {
             , required = true, example = "true.")
     private boolean deleted;
     
-    @ApiModelProperty(notes = "The addedBy parameter is used to show who update the movies or series. "
-            , required = true, example = "254721506974.")
     @Column(updatable = false)
     private String addedBy;
-    
-    @ApiModelProperty(notes = "The updatedBy parameter is used to show who update the movies or series. "
-            , required = true, example = "254721506974.")
     private String updatedBy;
-    
-    @ApiModelProperty(notes = "The deletedBy parameter is used to show who deleted the movies or series. "
-            , required = true, example = "254721506974.")
     private String deletedBy;
     
     @Temporal(javax.persistence.TemporalType.TIMESTAMP)

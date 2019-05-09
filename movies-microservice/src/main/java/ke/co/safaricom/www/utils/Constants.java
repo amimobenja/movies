@@ -15,6 +15,11 @@ public class Constants {
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+    public static final String API_DOC_TITLE = "Movies API";
+    public final static String API_DOC_DESCRIPTION = "<b>Movies Stuff APIs</b>";
+    public final static String API_DOC_LICENSE_TEXT = "Licence Version: MIT/X11";
+    public final static String API_DOC_SWAGGER_API_VERSION = "v.0.0.1";
+    
     
     // Default server response messages
     public static final String DEFAULT_RESPONSE_MESSAGE = "Request has been accepted by the server.";

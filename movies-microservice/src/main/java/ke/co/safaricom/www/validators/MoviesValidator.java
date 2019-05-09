@@ -5,7 +5,6 @@
  */
 package ke.co.safaricom.www.validators;
 
-import java.io.IOException;
 import java.util.List;
 import ke.co.safaricom.www.entities.Movies;
 import ke.co.safaricom.www.entities.services.MoviesService;
@@ -19,7 +18,7 @@ import org.springframework.http.HttpStatus;
  *
  * @author afro
  */
-public class MoviesValidator extends UserValidator{ 
+public class MoviesValidator {
 
     private static final Logger logger = LogManager.getLogger(MoviesValidator.class);
     private boolean isValid;
@@ -95,20 +94,9 @@ public class MoviesValidator extends UserValidator{
 
     }
 
-    public ResponseWrapper validateMovieRequest(String moviesRequest, MoviesService movieService, String httpMethod) throws IOException {
+    public ResponseWrapper validateMovieRequest(Movies movies, MoviesService movieService, String httpMethod) {
         logger.debug(" - Starting the validation process.");
         ResponseWrapper response = new ResponseWrapper();
-        
-        if (checkFields(moviesRequest, Movies.class)) {
-            response.setHttpStatus(HttpStatus.BAD_REQUEST);
-            response.setResponseMessage(BAD_PARAMS_RESPONSE_MESSAGE);
-            response.setResponseCode(HttpStatus.BAD_REQUEST.value());
-            
-            return response;
-        }
-        
-        Movies movies = (Movies) convertToEntity(moviesRequest, Movies.class);
-        
         if (movies.getDescription().isEmpty() || movies.getMovieOrSeries().isEmpty() || movies.getRecommendation().isEmpty()
                 || movies.getTitle().isEmpty()) {
             logger.debug(" - {}", EMPTY_PARAMS_RESPONSE_MESSAGE);

@@ -1,0 +1,25 @@
+ 
+2001  cd /media/afro/TKL1/Hackathon/
+ 2002  git clone https://github.com/amimobenja/movies.git
+ 2003  cd movies
+ 2004  git status
+ 2005  git add movies-microservice/
+ 2006  git status
+ 2007  git commit -m "First commit after adding user self registration, logging, oauth2 security and swagger documentation"
+ 2008  git push
+ 2009  git status
+ 2010  git add .
+ 2011  git commit -m "Adding the add movie post endpoint."
+ 2012  git status
+ 2013  git push
+ 2014  git status
+ 2015  git add .
+ 2016  git commit -m "Pushing changes after all functional requirements are met"
+ 2017  git push
+ 2018  git status
+ 2019  git pull
+ 2020  git status
+ 2021  git add .
+ 2022  git commit -m "Pushing changes after some successful test cases."
+ 2023  git push
+ 2024  history

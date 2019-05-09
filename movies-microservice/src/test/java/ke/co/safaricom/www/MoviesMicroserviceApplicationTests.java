@@ -5,6 +5,7 @@ import ke.co.safaricom.www.entities.Movies;
 import ke.co.safaricom.www.entities.Users;
 import ke.co.safaricom.www.entities.repositories.MoviesRepository;
 import ke.co.safaricom.www.entities.repositories.UserRepository;
+import ke.co.safaricom.www.entities.services.UserService;
 import org.junit.Test;
 import static ke.co.safaricom.www.testconstants.TestCasesConstants.*;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -41,10 +42,16 @@ public class MoviesMicroserviceApplicationTests {
 
     @Autowired
     private MockMvc mockMvc;
-    ObjectMapper mapper = new ObjectMapper();
+    ObjectMapper mapper = new ObjectMapper();    
+    
+    Users user = new Users(MSISDN, PASSWORD);
+    Movies movies = new Movies(MOVIE_TITLE.toUpperCase());
 
     @Autowired
     UserRepository usersRepo;
+
+    @Autowired
+    UserService usersService;
 
     @Autowired
     MoviesRepository moviesRepo;
@@ -62,6 +69,12 @@ public class MoviesMicroserviceApplicationTests {
     }
 
     private String obtainAccessToken(String username, String password) throws Exception {
+        user.setFirstName("Amimo");
+        user.setIdNo("26089909");
+        user.setSecondName("Benja");
+        
+        Users savedUser = usersRepo.save(user);
+        
 
         MultiValueMap<String, String> params = new LinkedMultiValueMap<>();
         params.add("grant_type", "password");
@@ -78,17 +91,15 @@ public class MoviesMicroserviceApplicationTests {
                         .andExpect(content().contentType("application/json;charset=UTF-8"));
 
         String resultString = result.andReturn().getResponse().getContentAsString();
+        
 
         JacksonJsonParser jsonParser = new JacksonJsonParser();
         return jsonParser.parseMap(resultString).get("access_token").toString();
     }
 
-    Users user = new Users(MSISDN, PASSWORD);
-    Movies movies = new Movies(MOVIE_TITLE.toUpperCase());
-
     @Test
     public void contextLoads() throws Exception {
-        assertThat(obtainAccessToken("254721506974", "password")).isNotNull();
+        
         assertThat(user).isNotNull();
         assertThat(movies).isNotNull();
     }
@@ -111,7 +122,28 @@ public class MoviesMicroserviceApplicationTests {
                 + "}";
 
         this.mockMvc.perform(post("/apis/register?access_token=" + accessToken).contentType(MediaType.APPLICATION_JSON)
-                .content(employeeString)).andExpect(status().isCreated());
+                .content(employeeString)).andExpect(status().isCreated());        
+        
+        usersRepo.deleteById(usersService.searchUserByMsisdn(user.getMsisdn()).getUserId());
+        usersRepo.deleteById(usersService.searchUserByMsisdn("254725506974").getUserId());
+    }
+    
+    @Test
+    public void givenToken_whenPostEmptyFieldsGetSecureRequest_thenBadRequest() throws Exception {
+        String accessToken = obtainAccessToken("254721506974", "password");
+
+        String employeeString = "{\n"
+                + "	\"firstName\":\"\",\n"
+                + "	\"secondName\":\"Owenje\",\n"
+                + "	\"msisdn\":\"0725506974\",\n"
+                + "	\"idNo\":\"26189909\",\n"
+                + "	\"password\":\"SMTH\"\n"
+                + "}";
+
+        this.mockMvc.perform(post("/apis/register?access_token=" + accessToken).contentType(MediaType.APPLICATION_JSON)
+                .content(employeeString)).andExpect(status().isBadRequest());
+        
+        usersRepo.deleteById(usersService.searchUserByMsisdn(user.getMsisdn()).getUserId());
     }
 
 }

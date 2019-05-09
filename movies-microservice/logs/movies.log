@@ -6551,3 +6551,961 @@ Caused by: java.lang.annotation.AnnotationFormatError: Duplicate annotation for 
 2019-05-09 14:47:52.165  INFO afro-HP-ProBook-440-G5 --- [       Thread-6] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2019-05-09 14:47:52.171  INFO afro-HP-ProBook-440-G5 --- [       Thread-6] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
 2019-05-09 14:47:52.203  INFO afro-HP-ProBook-440-G5 --- [       Thread-6] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.
+2019-05-09 14:54:27.452  INFO afro-HP-ProBook-440-G5 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [ke.co.safaricom.www.MoviesMicroserviceApplicationTests], using SpringBootContextLoader
+2019-05-09 14:54:27.491  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.t.c.s.AbstractContextLoader          : Could not detect default resource locations for test class [ke.co.safaricom.www.MoviesMicroserviceApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2019-05-09 14:54:27.494  INFO afro-HP-ProBook-440-G5 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [ke.co.safaricom.www.MoviesMicroserviceApplicationTests]: MoviesMicroserviceApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2019-05-09 14:54:27.931  INFO afro-HP-ProBook-440-G5 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration ke.co.safaricom.www.MoviesMicroserviceApplication for test class ke.co.safaricom.www.MoviesMicroserviceApplicationTests
+2019-05-09 14:54:28.235  INFO afro-HP-ProBook-440-G5 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener]
+2019-05-09 14:54:28.304  INFO afro-HP-ProBook-440-G5 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@65cc3902, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@c79915a, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@6173863f, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@a08e41b, org.springframework.test.context.support.DirtiesContextTestExecutionListener@e08d871, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4ebb7bab, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@33845e3d, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@7e615c6a, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@3662c887, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@23119bc3, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@32f54c2a, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@4603c412, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@66851aa5]
+2019-05-09 14:54:30.160  INFO afro-HP-ProBook-440-G5 --- [           main] c.s.w.MoviesMicroserviceApplicationTests : Starting MoviesMicroserviceApplicationTests on afro-HP-ProBook-440-G5 with PID 26050 (started by afro in /media/afro/TKL1/Hackathon/movies/movies-microservice)
+2019-05-09 14:54:30.166 DEBUG afro-HP-ProBook-440-G5 --- [           main] c.s.w.MoviesMicroserviceApplicationTests : Running with Spring Boot v2.1.4.RELEASE, Spring v5.1.6.RELEASE
+2019-05-09 14:54:30.167  INFO afro-HP-ProBook-440-G5 --- [           main] c.s.w.MoviesMicroserviceApplicationTests : No active profile set, falling back to default profiles: default
+2019-05-09 14:54:32.570  INFO afro-HP-ProBook-440-G5 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-05-09 14:54:32.742  INFO afro-HP-ProBook-440-G5 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 159ms. Found 2 repository interfaces.
+2019-05-09 14:54:34.006  INFO afro-HP-ProBook-440-G5 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$6d51a038] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-09 14:54:34.131  INFO afro-HP-ProBook-440-G5 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$5ff6872] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-09 14:54:34.148  INFO afro-HP-ProBook-440-G5 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-09 14:54:34.152  INFO afro-HP-ProBook-440-G5 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@223d3190' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-09 14:54:34.166  INFO afro-HP-ProBook-440-G5 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$2ad40b24] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-09 14:54:34.178  INFO afro-HP-ProBook-440-G5 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-09 14:54:34.609  INFO afro-HP-ProBook-440-G5 --- [           main] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2019-05-09 14:54:35.137  INFO afro-HP-ProBook-440-G5 --- [           main] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2019-05-09 14:54:35.328  INFO afro-HP-ProBook-440-G5 --- [           main] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-05-09 14:54:35.560  INFO afro-HP-ProBook-440-G5 --- [           main] o.h.Version                              : HHH000412: Hibernate Core {5.3.9.Final}
+2019-05-09 14:54:35.564  INFO afro-HP-ProBook-440-G5 --- [           main] o.h.c.Environment                        : HHH000206: hibernate.properties not found
+2019-05-09 14:54:35.918  INFO afro-HP-ProBook-440-G5 --- [           main] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-05-09 14:54:36.267  INFO afro-HP-ProBook-440-G5 --- [           main] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2019-05-09 14:54:36.520  INFO afro-HP-ProBook-440-G5 --- [           main] o.h.e.j.e.i.LobCreatorBuilderImpl        : HHH000421: Disabling contextual LOB creation as hibernate.jdbc.lob.non_contextual_creation is true
+2019-05-09 14:54:36.532  INFO afro-HP-ProBook-440-G5 --- [           main] o.h.t.BasicTypeRegistry                  : HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@5b407420
+2019-05-09 14:54:38.001  INFO afro-HP-ProBook-440-G5 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-05-09 14:54:40.610  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.s.w.DefaultSecurityFilterChain       : Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/oauth/token'], Ant [pattern='/oauth/token_key'], Ant [pattern='/oauth/check_token']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2da38ed1, org.springframework.security.web.context.SecurityContextPersistenceFilter@13cecfe3, org.springframework.security.web.header.HeaderWriterFilter@2e6c9460, org.springframework.security.web.authentication.logout.LogoutFilter@57e66ec0, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@78cd03b5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@c8feb39, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@8fcbe95, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@d6b408, org.springframework.security.web.session.SessionManagementFilter@3d18d656, org.springframework.security.web.access.ExceptionTranslationFilter@5814539b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@64e6379f]
+2019-05-09 14:54:40.647  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.s.w.DefaultSecurityFilterChain       : Creating filter chain: org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfiguration$NotOAuthRequestMatcher@123eb133, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@27b17c1a, org.springframework.security.web.context.SecurityContextPersistenceFilter@191c88e1, org.springframework.security.web.header.HeaderWriterFilter@109adaae, org.springframework.security.web.authentication.logout.LogoutFilter@db33908, org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter@77ff4ed0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2d269d91, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6b2f7d31, org.springframework.security.web.session.SessionManagementFilter@6c214b6f, org.springframework.security.web.access.ExceptionTranslationFilter@560c404b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@42a79d37]
+2019-05-09 14:54:40.654  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.s.w.DefaultSecurityFilterChain       : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@745fafee, org.springframework.security.web.context.SecurityContextPersistenceFilter@105d4230, org.springframework.security.web.header.HeaderWriterFilter@36cffc88, org.springframework.security.web.authentication.logout.LogoutFilter@1d9a08d8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@67617301, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2e83f8d9, org.springframework.security.web.session.SessionManagementFilter@2652af0e, org.springframework.security.web.access.ExceptionTranslationFilter@3889f852, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@77dc6cc1]
+2019-05-09 14:54:41.879  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-09 14:54:42.014  WARN afro-HP-ProBook-440-G5 --- [           main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-05-09 14:54:43.615  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 2 endpoint(s) beneath base path '/actuator'
+2019-05-09 14:54:43.977  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2019-05-09 14:54:43.977  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.t.w.s.TestDispatcherServlet          : Initializing Servlet ''
+2019-05-09 14:54:44.005  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.t.w.s.TestDispatcherServlet          : Completed initialization in 28 ms
+2019-05-09 14:54:44.130  INFO afro-HP-ProBook-440-G5 --- [           main] c.s.w.MoviesMicroserviceApplicationTests : Started MoviesMicroserviceApplicationTests in 15.015 seconds (JVM running for 19.672)
+2019-05-09 14:54:44.322  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2019-05-09 14:54:44.322  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.t.w.s.TestDispatcherServlet          : Initializing Servlet ''
+2019-05-09 14:54:44.330  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.t.w.s.TestDispatcherServlet          : Completed initialization in 7 ms
+2019-05-09 14:54:44.735  INFO afro-HP-ProBook-440-G5 --- [           main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-05-09 14:54:45.039 DEBUG afro-HP-ProBook-440-G5 --- [           main] o.h.SQL                                  : select users0_.user_id as user_id1_1_, users0_.first_name as first_na2_1_, users0_.id_no as id_no3_1_, users0_.msisdn as msisdn4_1_, users0_.password as password5_1_, users0_.registration_date as registra6_1_, users0_.second_name as second_n7_1_, users0_.status as status8_1_ from users users0_ where users0_.msisdn=?
+2019-05-09 14:54:45.049 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [1] as [VARCHAR] - [254721506974]
+2019-05-09 14:54:45.056 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([user_id1_1_] : [INTEGER]) - [0]
+2019-05-09 14:54:45.067 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([first_na2_1_] : [VARCHAR]) - [Amimo]
+2019-05-09 14:54:45.068 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([id_no3_1_] : [VARCHAR]) - [26089909]
+2019-05-09 14:54:45.068 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([msisdn4_1_] : [VARCHAR]) - [254721506974]
+2019-05-09 14:54:45.069 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([password5_1_] : [VARCHAR]) - [$2a$04$I9Q2sDc4QGGg5WNTLmsz0.fvGv3OjoZyj81PrSFyGOqMphqfS2qKu]
+2019-05-09 14:54:45.073 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([registra6_1_] : [TIMESTAMP]) - [2019-05-06 09:36:40.116]
+2019-05-09 14:54:45.073 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([second_n7_1_] : [VARCHAR]) - [Benja]
+2019-05-09 14:54:45.075 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([status8_1_] : [BOOLEAN]) - [true]
+2019-05-09 14:54:45.197  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.s.o.p.t.s.JdbcTokenStore             : Failed to find access token for token 31988f27-e077-4a89-993a-f5212fb9d112
+2019-05-09 14:54:45.569  INFO afro-HP-ProBook-440-G5 --- [           main] k.c.s.w.c.MoviesController               : REGISTRATION REQUEST RECEIVED.
+2019-05-09 14:54:45.572 DEBUG afro-HP-ProBook-440-G5 --- [           main] k.c.s.w.v.UserValidator                  :  - Starting the validation process.
+2019-05-09 14:54:45.632  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2019-05-09 14:54:45.633  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.t.w.s.TestDispatcherServlet          : Initializing Servlet ''
+2019-05-09 14:54:45.638  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.t.w.s.TestDispatcherServlet          : Completed initialization in 5 ms
+2019-05-09 14:54:45.661  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2019-05-09 14:54:45.661  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.t.w.s.TestDispatcherServlet          : Initializing Servlet ''
+2019-05-09 14:54:45.668  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.t.w.s.TestDispatcherServlet          : Completed initialization in 7 ms
+2019-05-09 14:54:45.675 DEBUG afro-HP-ProBook-440-G5 --- [           main] o.h.SQL                                  : select users0_.user_id as user_id1_1_, users0_.first_name as first_na2_1_, users0_.id_no as id_no3_1_, users0_.msisdn as msisdn4_1_, users0_.password as password5_1_, users0_.registration_date as registra6_1_, users0_.second_name as second_n7_1_, users0_.status as status8_1_ from users users0_ where users0_.msisdn=?
+2019-05-09 14:54:45.676 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [1] as [VARCHAR] - [254721506974]
+2019-05-09 14:54:45.678 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([user_id1_1_] : [INTEGER]) - [0]
+2019-05-09 14:54:45.678 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([first_na2_1_] : [VARCHAR]) - [Amimo]
+2019-05-09 14:54:45.679 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([id_no3_1_] : [VARCHAR]) - [26089909]
+2019-05-09 14:54:45.679 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([msisdn4_1_] : [VARCHAR]) - [254721506974]
+2019-05-09 14:54:45.680 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([password5_1_] : [VARCHAR]) - [$2a$04$I9Q2sDc4QGGg5WNTLmsz0.fvGv3OjoZyj81PrSFyGOqMphqfS2qKu]
+2019-05-09 14:54:45.680 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([registra6_1_] : [TIMESTAMP]) - [2019-05-06 09:36:40.116]
+2019-05-09 14:54:45.681 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([second_n7_1_] : [VARCHAR]) - [Benja]
+2019-05-09 14:54:45.681 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([status8_1_] : [BOOLEAN]) - [true]
+2019-05-09 14:54:45.733  INFO afro-HP-ProBook-440-G5 --- [           main] k.c.s.w.c.MoviesController               : REGISTRATION REQUEST RECEIVED.
+2019-05-09 14:54:45.733 DEBUG afro-HP-ProBook-440-G5 --- [           main] k.c.s.w.v.UserValidator                  :  - Starting the validation process.
+2019-05-09 14:54:45.762 DEBUG afro-HP-ProBook-440-G5 --- [           main] o.h.SQL                                  : select users0_.user_id as user_id1_1_, users0_.first_name as first_na2_1_, users0_.id_no as id_no3_1_, users0_.msisdn as msisdn4_1_, users0_.password as password5_1_, users0_.registration_date as registra6_1_, users0_.second_name as second_n7_1_, users0_.status as status8_1_ from users users0_ where users0_.msisdn=? and users0_.password=? and users0_.status=?
+2019-05-09 14:54:45.763 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [1] as [VARCHAR] - [254725506974]
+2019-05-09 14:54:45.764 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [2] as [VARCHAR] - [26189909]
+2019-05-09 14:54:45.765 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [3] as [BOOLEAN] - [true]
+2019-05-09 14:54:45.773 DEBUG afro-HP-ProBook-440-G5 --- [           main] k.c.s.w.v.UserValidator                  :  - Entity Object is valid.
+2019-05-09 14:54:45.911 DEBUG afro-HP-ProBook-440-G5 --- [           main] o.h.SQL                                  : select nextval ('hibernate_sequence')
+2019-05-09 14:54:45.991 DEBUG afro-HP-ProBook-440-G5 --- [           main] o.h.SQL                                  : insert into users (first_name, id_no, msisdn, password, registration_date, second_name, status, user_id) values (?, ?, ?, ?, ?, ?, ?, ?)
+2019-05-09 14:54:45.992 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [1] as [VARCHAR] - [Nicholus]
+2019-05-09 14:54:45.992 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [2] as [VARCHAR] - [26189909]
+2019-05-09 14:54:45.993 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [3] as [VARCHAR] - [254725506974]
+2019-05-09 14:54:45.993 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [4] as [VARCHAR] - [$2a$10$C9usjgb77QR1dkP6VhiCFerSGt8fbbF99GfSgA8.fSS4sjuYUfCbq]
+2019-05-09 14:54:45.999 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [5] as [TIMESTAMP] - [Thu May 09 14:54:45 EAT 2019]
+2019-05-09 14:54:46.000 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [6] as [VARCHAR] - [Owenje]
+2019-05-09 14:54:46.001 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [7] as [BOOLEAN] - [true]
+2019-05-09 14:54:46.003 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [8] as [INTEGER] - [17]
+2019-05-09 14:54:46.041  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2019-05-09 14:54:46.041  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.t.w.s.TestDispatcherServlet          : Initializing Servlet ''
+2019-05-09 14:54:46.047  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.t.w.s.TestDispatcherServlet          : Completed initialization in 5 ms
+2019-05-09 14:54:46.054 DEBUG afro-HP-ProBook-440-G5 --- [           main] o.h.SQL                                  : select users0_.user_id as user_id1_1_, users0_.first_name as first_na2_1_, users0_.id_no as id_no3_1_, users0_.msisdn as msisdn4_1_, users0_.password as password5_1_, users0_.registration_date as registra6_1_, users0_.second_name as second_n7_1_, users0_.status as status8_1_ from users users0_ where users0_.msisdn=?
+2019-05-09 14:54:46.055 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [1] as [VARCHAR] - [254721506974]
+2019-05-09 14:54:46.057 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([user_id1_1_] : [INTEGER]) - [0]
+2019-05-09 14:54:46.058 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([first_na2_1_] : [VARCHAR]) - [Amimo]
+2019-05-09 14:54:46.058 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([id_no3_1_] : [VARCHAR]) - [26089909]
+2019-05-09 14:54:46.059 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([msisdn4_1_] : [VARCHAR]) - [254721506974]
+2019-05-09 14:54:46.060 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([password5_1_] : [VARCHAR]) - [$2a$04$I9Q2sDc4QGGg5WNTLmsz0.fvGv3OjoZyj81PrSFyGOqMphqfS2qKu]
+2019-05-09 14:54:46.060 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([registra6_1_] : [TIMESTAMP]) - [2019-05-06 09:36:40.116]
+2019-05-09 14:54:46.061 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([second_n7_1_] : [VARCHAR]) - [Benja]
+2019-05-09 14:54:46.061 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([status8_1_] : [BOOLEAN]) - [true]
+2019-05-09 14:54:46.291  INFO afro-HP-ProBook-440-G5 --- [       Thread-6] o.s.s.c.ThreadPoolTaskExecutor           : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-05-09 14:54:46.299  INFO afro-HP-ProBook-440-G5 --- [       Thread-6] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-05-09 14:54:48.810  INFO afro-HP-ProBook-440-G5 --- [       Thread-6] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
+2019-05-09 14:54:48.823  INFO afro-HP-ProBook-440-G5 --- [       Thread-6] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.
+2019-05-09 15:09:52.773  INFO afro-HP-ProBook-440-G5 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [ke.co.safaricom.www.MoviesMicroserviceApplicationTests], using SpringBootContextLoader
+2019-05-09 15:09:52.807  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.t.c.s.AbstractContextLoader          : Could not detect default resource locations for test class [ke.co.safaricom.www.MoviesMicroserviceApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2019-05-09 15:09:52.810  INFO afro-HP-ProBook-440-G5 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [ke.co.safaricom.www.MoviesMicroserviceApplicationTests]: MoviesMicroserviceApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2019-05-09 15:09:53.211  INFO afro-HP-ProBook-440-G5 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration ke.co.safaricom.www.MoviesMicroserviceApplication for test class ke.co.safaricom.www.MoviesMicroserviceApplicationTests
+2019-05-09 15:09:53.548  INFO afro-HP-ProBook-440-G5 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener]
+2019-05-09 15:09:53.610  INFO afro-HP-ProBook-440-G5 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@e08d871, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@4ebb7bab, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@33845e3d, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@7e615c6a, org.springframework.test.context.support.DirtiesContextTestExecutionListener@3662c887, org.springframework.test.context.transaction.TransactionalTestExecutionListener@23119bc3, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@32f54c2a, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4603c412, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@66851aa5, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@49654a35, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@5169db2f, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@912a644, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@478cc5f1]
+2019-05-09 15:09:55.477  INFO afro-HP-ProBook-440-G5 --- [           main] c.s.w.MoviesMicroserviceApplicationTests : Starting MoviesMicroserviceApplicationTests on afro-HP-ProBook-440-G5 with PID 27023 (started by afro in /media/afro/TKL1/Hackathon/movies/movies-microservice)
+2019-05-09 15:09:55.485 DEBUG afro-HP-ProBook-440-G5 --- [           main] c.s.w.MoviesMicroserviceApplicationTests : Running with Spring Boot v2.1.4.RELEASE, Spring v5.1.6.RELEASE
+2019-05-09 15:09:55.487  INFO afro-HP-ProBook-440-G5 --- [           main] c.s.w.MoviesMicroserviceApplicationTests : No active profile set, falling back to default profiles: default
+2019-05-09 15:09:58.187  INFO afro-HP-ProBook-440-G5 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-05-09 15:09:58.374  INFO afro-HP-ProBook-440-G5 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 166ms. Found 2 repository interfaces.
+2019-05-09 15:09:59.687  INFO afro-HP-ProBook-440-G5 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ba13c659] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-09 15:09:59.825  INFO afro-HP-ProBook-440-G5 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$52c18e93] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-09 15:09:59.845  INFO afro-HP-ProBook-440-G5 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-09 15:09:59.849  INFO afro-HP-ProBook-440-G5 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@29090da9' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-09 15:09:59.867  INFO afro-HP-ProBook-440-G5 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$77963145] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-09 15:09:59.883  INFO afro-HP-ProBook-440-G5 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-09 15:10:00.367  INFO afro-HP-ProBook-440-G5 --- [           main] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2019-05-09 15:10:00.908  INFO afro-HP-ProBook-440-G5 --- [           main] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2019-05-09 15:10:01.126  INFO afro-HP-ProBook-440-G5 --- [           main] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-05-09 15:10:01.413  INFO afro-HP-ProBook-440-G5 --- [           main] o.h.Version                              : HHH000412: Hibernate Core {5.3.9.Final}
+2019-05-09 15:10:01.418  INFO afro-HP-ProBook-440-G5 --- [           main] o.h.c.Environment                        : HHH000206: hibernate.properties not found
+2019-05-09 15:10:01.936  INFO afro-HP-ProBook-440-G5 --- [           main] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-05-09 15:10:02.448  INFO afro-HP-ProBook-440-G5 --- [           main] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2019-05-09 15:10:02.739  INFO afro-HP-ProBook-440-G5 --- [           main] o.h.e.j.e.i.LobCreatorBuilderImpl        : HHH000421: Disabling contextual LOB creation as hibernate.jdbc.lob.non_contextual_creation is true
+2019-05-09 15:10:02.753  INFO afro-HP-ProBook-440-G5 --- [           main] o.h.t.BasicTypeRegistry                  : HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@68c1112c
+2019-05-09 15:10:04.760  INFO afro-HP-ProBook-440-G5 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-05-09 15:10:07.749  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.s.w.DefaultSecurityFilterChain       : Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/oauth/token'], Ant [pattern='/oauth/token_key'], Ant [pattern='/oauth/check_token']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2bef54a2, org.springframework.security.web.context.SecurityContextPersistenceFilter@1ce478b9, org.springframework.security.web.header.HeaderWriterFilter@a3bb459, org.springframework.security.web.authentication.logout.LogoutFilter@3cd2db8f, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@2b2737da, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@59c09d4a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@a37411c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4f1560b8, org.springframework.security.web.session.SessionManagementFilter@7002749a, org.springframework.security.web.access.ExceptionTranslationFilter@73e7ad4b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@22a5fe3e]
+2019-05-09 15:10:07.790  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.s.w.DefaultSecurityFilterChain       : Creating filter chain: org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfiguration$NotOAuthRequestMatcher@669d6390, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@72b3a1e6, org.springframework.security.web.context.SecurityContextPersistenceFilter@301b334, org.springframework.security.web.header.HeaderWriterFilter@15492453, org.springframework.security.web.authentication.logout.LogoutFilter@5bd22e1a, org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter@67ac8599, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7c91d3fa, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@20260b87, org.springframework.security.web.session.SessionManagementFilter@fbe8627, org.springframework.security.web.access.ExceptionTranslationFilter@6bd297b1, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@37fdfbc8]
+2019-05-09 15:10:07.796  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.s.w.DefaultSecurityFilterChain       : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@41623e89, org.springframework.security.web.context.SecurityContextPersistenceFilter@1ebac349, org.springframework.security.web.header.HeaderWriterFilter@3399be33, org.springframework.security.web.authentication.logout.LogoutFilter@4c143d09, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@47bb5033, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@39ad16d1, org.springframework.security.web.session.SessionManagementFilter@118c880d, org.springframework.security.web.access.ExceptionTranslationFilter@65be065, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2580fb27]
+2019-05-09 15:10:09.137  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-09 15:10:09.310  WARN afro-HP-ProBook-440-G5 --- [           main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-05-09 15:10:11.273  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 2 endpoint(s) beneath base path '/actuator'
+2019-05-09 15:10:11.652  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2019-05-09 15:10:11.653  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.t.w.s.TestDispatcherServlet          : Initializing Servlet ''
+2019-05-09 15:10:11.696  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.t.w.s.TestDispatcherServlet          : Completed initialization in 43 ms
+2019-05-09 15:10:11.824  INFO afro-HP-ProBook-440-G5 --- [           main] c.s.w.MoviesMicroserviceApplicationTests : Started MoviesMicroserviceApplicationTests in 17.389 seconds (JVM running for 21.808)
+2019-05-09 15:10:12.049  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2019-05-09 15:10:12.050  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.t.w.s.TestDispatcherServlet          : Initializing Servlet ''
+2019-05-09 15:10:12.058  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.t.w.s.TestDispatcherServlet          : Completed initialization in 8 ms
+2019-05-09 15:10:12.122 DEBUG afro-HP-ProBook-440-G5 --- [           main] o.h.SQL                                  : select nextval ('hibernate_sequence')
+2019-05-09 15:10:12.237 DEBUG afro-HP-ProBook-440-G5 --- [           main] o.h.SQL                                  : insert into users (first_name, id_no, msisdn, password, registration_date, second_name, status, user_id) values (?, ?, ?, ?, ?, ?, ?, ?)
+2019-05-09 15:10:12.241 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [1] as [VARCHAR] - [Amimo]
+2019-05-09 15:10:12.242 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [2] as [VARCHAR] - [26089909]
+2019-05-09 15:10:12.243 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [3] as [VARCHAR] - [254721506974]
+2019-05-09 15:10:12.243 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [4] as [VARCHAR] - [$2a$04$I9Q2sDc4QGGg5WNTLmsz0.fvGv3OjoZyj81PrSFyGOqMphqfS2qKu]
+2019-05-09 15:10:12.252 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [5] as [TIMESTAMP] - [Thu May 09 15:09:54 EAT 2019]
+2019-05-09 15:10:12.255 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [6] as [VARCHAR] - [Benja]
+2019-05-09 15:10:12.258 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [7] as [BOOLEAN] - [true]
+2019-05-09 15:10:12.260 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [8] as [INTEGER] - [18]
+2019-05-09 15:10:12.843  INFO afro-HP-ProBook-440-G5 --- [           main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-05-09 15:10:13.180 DEBUG afro-HP-ProBook-440-G5 --- [           main] o.h.SQL                                  : select users0_.user_id as user_id1_1_, users0_.first_name as first_na2_1_, users0_.id_no as id_no3_1_, users0_.msisdn as msisdn4_1_, users0_.password as password5_1_, users0_.registration_date as registra6_1_, users0_.second_name as second_n7_1_, users0_.status as status8_1_ from users users0_ where users0_.msisdn=?
+2019-05-09 15:10:13.183 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [1] as [VARCHAR] - [254721506974]
+2019-05-09 15:10:13.188 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([user_id1_1_] : [INTEGER]) - [0]
+2019-05-09 15:10:13.194 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([first_na2_1_] : [VARCHAR]) - [Amimo]
+2019-05-09 15:10:13.194 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([id_no3_1_] : [VARCHAR]) - [26089909]
+2019-05-09 15:10:13.195 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([msisdn4_1_] : [VARCHAR]) - [254721506974]
+2019-05-09 15:10:13.195 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([password5_1_] : [VARCHAR]) - [$2a$04$I9Q2sDc4QGGg5WNTLmsz0.fvGv3OjoZyj81PrSFyGOqMphqfS2qKu]
+2019-05-09 15:10:13.198 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([registra6_1_] : [TIMESTAMP]) - [2019-05-06 09:36:40.116]
+2019-05-09 15:10:13.198 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([second_n7_1_] : [VARCHAR]) - [Benja]
+2019-05-09 15:10:13.200 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([status8_1_] : [BOOLEAN]) - [true]
+2019-05-09 15:10:13.200 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([user_id1_1_] : [INTEGER]) - [18]
+2019-05-09 15:10:13.201 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([first_na2_1_] : [VARCHAR]) - [Amimo]
+2019-05-09 15:10:13.201 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([id_no3_1_] : [VARCHAR]) - [26089909]
+2019-05-09 15:10:13.202 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([msisdn4_1_] : [VARCHAR]) - [254721506974]
+2019-05-09 15:10:13.202 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([password5_1_] : [VARCHAR]) - [$2a$04$I9Q2sDc4QGGg5WNTLmsz0.fvGv3OjoZyj81PrSFyGOqMphqfS2qKu]
+2019-05-09 15:10:13.202 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([registra6_1_] : [TIMESTAMP]) - [2019-05-09 15:09:54.267]
+2019-05-09 15:10:13.203 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([second_n7_1_] : [VARCHAR]) - [Benja]
+2019-05-09 15:10:13.203 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([status8_1_] : [BOOLEAN]) - [true]
+2019-05-09 15:10:13.218 ERROR afro-HP-ProBook-440-G5 --- [           main] o.s.s.o.p.e.TokenEndpoint                : Handling error: InternalAuthenticationServiceException, query did not return a unique result: 2; nested exception is javax.persistence.NonUniqueResultException: query did not return a unique result: 2
+org.springframework.security.authentication.InternalAuthenticationServiceException: query did not return a unique result: 2; nested exception is javax.persistence.NonUniqueResultException: query did not return a unique result: 2
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:123)
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:144)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:175)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:513)
+	at org.springframework.security.oauth2.provider.password.ResourceOwnerPasswordTokenGranter.getOAuth2Authentication(ResourceOwnerPasswordTokenGranter.java:71)
+	at org.springframework.security.oauth2.provider.token.AbstractTokenGranter.getAccessToken(AbstractTokenGranter.java:72)
+	at org.springframework.security.oauth2.provider.token.AbstractTokenGranter.grant(AbstractTokenGranter.java:67)
+	at org.springframework.security.oauth2.provider.CompositeTokenGranter.grant(CompositeTokenGranter.java:38)
+	at org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerEndpointsConfigurer$4.grant(AuthorizationServerEndpointsConfigurer.java:583)
+	at org.springframework.security.oauth2.provider.endpoint.TokenEndpoint.postAccessToken(TokenEndpoint.java:132)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:189)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at org.springframework.test.web.servlet.TestDispatcherServlet.service(TestDispatcherServlet.java:71)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.springframework.mock.web.MockFilterChain$ServletFilterProxy.doFilter(MockFilterChain.java:166)
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:133)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:127)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:91)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:170)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:215)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:74)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:133)
+	at org.springframework.test.web.servlet.MockMvc.perform(MockMvc.java:182)
+	at ke.co.safaricom.www.MoviesMicroserviceApplicationTests.obtainAccessToken(MoviesMicroserviceApplicationTests.java:82)
+	at ke.co.safaricom.www.MoviesMicroserviceApplicationTests.givenToken_whenPostEmptyFieldsGetSecureRequest_thenBadRequest(MoviesMicroserviceApplicationTests.java:128)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestExecutionCallbacks.evaluate(RunBeforeTestExecutionCallbacks.java:74)
+	at org.springframework.test.context.junit4.statements.RunAfterTestExecutionCallbacks.evaluate(RunAfterTestExecutionCallbacks.java:84)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:251)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+Caused by: org.springframework.dao.IncorrectResultSizeDataAccessException: query did not return a unique result: 2; nested exception is javax.persistence.NonUniqueResultException: query did not return a unique result: 2
+	at org.springframework.orm.jpa.EntityManagerFactoryUtils.convertJpaAccessExceptionIfPossible(EntityManagerFactoryUtils.java:384)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:255)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:527)
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61)
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:242)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:153)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:138)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:93)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.repository.core.support.SurroundingTransactionDetectorMethodInterceptor.invoke(SurroundingTransactionDetectorMethodInterceptor.java:61)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy144.findByMsisdn(Unknown Source)
+	at ke.co.safaricom.www.entities.services.implementors.UserServiceImplementation.loadUserByUsername(UserServiceImplementation.java:31)
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:108)
+	... 97 more
+Caused by: javax.persistence.NonUniqueResultException: query did not return a unique result: 2
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:128)
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:181)
+	at org.hibernate.query.internal.AbstractProducedQuery.getSingleResult(AbstractProducedQuery.java:1561)
+	at org.hibernate.query.criteria.internal.compile.CriteriaQueryTypeQueryAdapter.getSingleResult(CriteriaQueryTypeQueryAdapter.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$DeferredQueryInvocationHandler.invoke(SharedEntityManagerCreator.java:402)
+	at com.sun.proxy.$Proxy183.getSingleResult(Unknown Source)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution$SingleEntityExecution.doExecute(JpaQueryExecution.java:214)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:91)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:136)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:125)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.doInvoke(RepositoryFactorySupport.java:605)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.lambda$invoke$3(RepositoryFactorySupport.java:595)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.invoke(RepositoryFactorySupport.java:595)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:59)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	... 108 more
+2019-05-09 15:10:13.380  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2019-05-09 15:10:13.381  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.t.w.s.TestDispatcherServlet          : Initializing Servlet ''
+2019-05-09 15:10:13.389  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.t.w.s.TestDispatcherServlet          : Completed initialization in 7 ms
+2019-05-09 15:10:13.402  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2019-05-09 15:10:13.403  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.t.w.s.TestDispatcherServlet          : Initializing Servlet ''
+2019-05-09 15:10:13.412  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.t.w.s.TestDispatcherServlet          : Completed initialization in 8 ms
+2019-05-09 15:10:13.414 DEBUG afro-HP-ProBook-440-G5 --- [           main] o.h.SQL                                  : select nextval ('hibernate_sequence')
+2019-05-09 15:10:13.417 DEBUG afro-HP-ProBook-440-G5 --- [           main] o.h.SQL                                  : insert into users (first_name, id_no, msisdn, password, registration_date, second_name, status, user_id) values (?, ?, ?, ?, ?, ?, ?, ?)
+2019-05-09 15:10:13.417 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [1] as [VARCHAR] - [Amimo]
+2019-05-09 15:10:13.418 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [2] as [VARCHAR] - [26089909]
+2019-05-09 15:10:13.418 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [3] as [VARCHAR] - [254721506974]
+2019-05-09 15:10:13.419 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [4] as [VARCHAR] - [$2a$04$I9Q2sDc4QGGg5WNTLmsz0.fvGv3OjoZyj81PrSFyGOqMphqfS2qKu]
+2019-05-09 15:10:13.423 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [5] as [TIMESTAMP] - [Thu May 09 15:10:13 EAT 2019]
+2019-05-09 15:10:13.424 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [6] as [VARCHAR] - [Benja]
+2019-05-09 15:10:13.424 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [7] as [BOOLEAN] - [true]
+2019-05-09 15:10:13.425 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [8] as [INTEGER] - [19]
+2019-05-09 15:10:13.714 DEBUG afro-HP-ProBook-440-G5 --- [           main] o.h.SQL                                  : select users0_.user_id as user_id1_1_, users0_.first_name as first_na2_1_, users0_.id_no as id_no3_1_, users0_.msisdn as msisdn4_1_, users0_.password as password5_1_, users0_.registration_date as registra6_1_, users0_.second_name as second_n7_1_, users0_.status as status8_1_ from users users0_ where users0_.msisdn=?
+2019-05-09 15:10:13.715 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [1] as [VARCHAR] - [254721506974]
+2019-05-09 15:10:13.716 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([user_id1_1_] : [INTEGER]) - [0]
+2019-05-09 15:10:13.717 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([first_na2_1_] : [VARCHAR]) - [Amimo]
+2019-05-09 15:10:13.718 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([id_no3_1_] : [VARCHAR]) - [26089909]
+2019-05-09 15:10:13.718 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([msisdn4_1_] : [VARCHAR]) - [254721506974]
+2019-05-09 15:10:13.719 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([password5_1_] : [VARCHAR]) - [$2a$04$I9Q2sDc4QGGg5WNTLmsz0.fvGv3OjoZyj81PrSFyGOqMphqfS2qKu]
+2019-05-09 15:10:13.719 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([registra6_1_] : [TIMESTAMP]) - [2019-05-06 09:36:40.116]
+2019-05-09 15:10:13.720 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([second_n7_1_] : [VARCHAR]) - [Benja]
+2019-05-09 15:10:13.720 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([status8_1_] : [BOOLEAN]) - [true]
+2019-05-09 15:10:13.721 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([user_id1_1_] : [INTEGER]) - [18]
+2019-05-09 15:10:13.721 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([first_na2_1_] : [VARCHAR]) - [Amimo]
+2019-05-09 15:10:13.722 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([id_no3_1_] : [VARCHAR]) - [26089909]
+2019-05-09 15:10:13.722 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([msisdn4_1_] : [VARCHAR]) - [254721506974]
+2019-05-09 15:10:13.723 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([password5_1_] : [VARCHAR]) - [$2a$04$I9Q2sDc4QGGg5WNTLmsz0.fvGv3OjoZyj81PrSFyGOqMphqfS2qKu]
+2019-05-09 15:10:13.724 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([registra6_1_] : [TIMESTAMP]) - [2019-05-09 15:09:54.267]
+2019-05-09 15:10:13.724 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([second_n7_1_] : [VARCHAR]) - [Benja]
+2019-05-09 15:10:13.725 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([status8_1_] : [BOOLEAN]) - [true]
+2019-05-09 15:10:13.726 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([user_id1_1_] : [INTEGER]) - [19]
+2019-05-09 15:10:13.726 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([first_na2_1_] : [VARCHAR]) - [Amimo]
+2019-05-09 15:10:13.727 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([id_no3_1_] : [VARCHAR]) - [26089909]
+2019-05-09 15:10:13.727 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([msisdn4_1_] : [VARCHAR]) - [254721506974]
+2019-05-09 15:10:13.728 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([password5_1_] : [VARCHAR]) - [$2a$04$I9Q2sDc4QGGg5WNTLmsz0.fvGv3OjoZyj81PrSFyGOqMphqfS2qKu]
+2019-05-09 15:10:13.728 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([registra6_1_] : [TIMESTAMP]) - [2019-05-09 15:10:13.399]
+2019-05-09 15:10:13.729 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([second_n7_1_] : [VARCHAR]) - [Benja]
+2019-05-09 15:10:13.729 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([status8_1_] : [BOOLEAN]) - [true]
+2019-05-09 15:10:13.731 ERROR afro-HP-ProBook-440-G5 --- [           main] o.s.s.o.p.e.TokenEndpoint                : Handling error: InternalAuthenticationServiceException, query did not return a unique result: 3; nested exception is javax.persistence.NonUniqueResultException: query did not return a unique result: 3
+org.springframework.security.authentication.InternalAuthenticationServiceException: query did not return a unique result: 3; nested exception is javax.persistence.NonUniqueResultException: query did not return a unique result: 3
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:123)
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:144)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:175)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:503)
+	at org.springframework.security.oauth2.provider.password.ResourceOwnerPasswordTokenGranter.getOAuth2Authentication(ResourceOwnerPasswordTokenGranter.java:71)
+	at org.springframework.security.oauth2.provider.token.AbstractTokenGranter.getAccessToken(AbstractTokenGranter.java:72)
+	at org.springframework.security.oauth2.provider.token.AbstractTokenGranter.grant(AbstractTokenGranter.java:67)
+	at org.springframework.security.oauth2.provider.CompositeTokenGranter.grant(CompositeTokenGranter.java:38)
+	at org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerEndpointsConfigurer$4.grant(AuthorizationServerEndpointsConfigurer.java:583)
+	at org.springframework.security.oauth2.provider.endpoint.TokenEndpoint.postAccessToken(TokenEndpoint.java:132)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:189)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at org.springframework.test.web.servlet.TestDispatcherServlet.service(TestDispatcherServlet.java:71)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.springframework.mock.web.MockFilterChain$ServletFilterProxy.doFilter(MockFilterChain.java:166)
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:133)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:127)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:91)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:170)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:215)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:74)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:133)
+	at org.springframework.test.web.servlet.MockMvc.perform(MockMvc.java:182)
+	at ke.co.safaricom.www.MoviesMicroserviceApplicationTests.obtainAccessToken(MoviesMicroserviceApplicationTests.java:82)
+	at ke.co.safaricom.www.MoviesMicroserviceApplicationTests.givenToken_whenPostGetSecureRequest_thenCreated(MoviesMicroserviceApplicationTests.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestExecutionCallbacks.evaluate(RunBeforeTestExecutionCallbacks.java:74)
+	at org.springframework.test.context.junit4.statements.RunAfterTestExecutionCallbacks.evaluate(RunAfterTestExecutionCallbacks.java:84)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:251)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+Caused by: org.springframework.dao.IncorrectResultSizeDataAccessException: query did not return a unique result: 3; nested exception is javax.persistence.NonUniqueResultException: query did not return a unique result: 3
+	at org.springframework.orm.jpa.EntityManagerFactoryUtils.convertJpaAccessExceptionIfPossible(EntityManagerFactoryUtils.java:384)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:255)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:527)
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61)
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:242)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:153)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:138)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:93)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.repository.core.support.SurroundingTransactionDetectorMethodInterceptor.invoke(SurroundingTransactionDetectorMethodInterceptor.java:61)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy144.findByMsisdn(Unknown Source)
+	at ke.co.safaricom.www.entities.services.implementors.UserServiceImplementation.loadUserByUsername(UserServiceImplementation.java:31)
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:108)
+	... 97 more
+Caused by: javax.persistence.NonUniqueResultException: query did not return a unique result: 3
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:128)
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:181)
+	at org.hibernate.query.internal.AbstractProducedQuery.getSingleResult(AbstractProducedQuery.java:1561)
+	at org.hibernate.query.criteria.internal.compile.CriteriaQueryTypeQueryAdapter.getSingleResult(CriteriaQueryTypeQueryAdapter.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$DeferredQueryInvocationHandler.invoke(SharedEntityManagerCreator.java:402)
+	at com.sun.proxy.$Proxy183.getSingleResult(Unknown Source)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution$SingleEntityExecution.doExecute(JpaQueryExecution.java:214)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:91)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:136)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:125)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.doInvoke(RepositoryFactorySupport.java:605)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.lambda$invoke$3(RepositoryFactorySupport.java:595)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.invoke(RepositoryFactorySupport.java:595)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:59)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	... 108 more
+2019-05-09 15:10:13.753  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2019-05-09 15:10:13.753  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.t.w.s.TestDispatcherServlet          : Initializing Servlet ''
+2019-05-09 15:10:13.761  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.t.w.s.TestDispatcherServlet          : Completed initialization in 6 ms
+2019-05-09 15:10:13.763 DEBUG afro-HP-ProBook-440-G5 --- [           main] o.h.SQL                                  : select nextval ('hibernate_sequence')
+2019-05-09 15:10:13.765 DEBUG afro-HP-ProBook-440-G5 --- [           main] o.h.SQL                                  : insert into users (first_name, id_no, msisdn, password, registration_date, second_name, status, user_id) values (?, ?, ?, ?, ?, ?, ?, ?)
+2019-05-09 15:10:13.766 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [1] as [VARCHAR] - [Amimo]
+2019-05-09 15:10:13.766 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [2] as [VARCHAR] - [26089909]
+2019-05-09 15:10:13.766 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [3] as [VARCHAR] - [254721506974]
+2019-05-09 15:10:13.766 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [4] as [VARCHAR] - [$2a$04$I9Q2sDc4QGGg5WNTLmsz0.fvGv3OjoZyj81PrSFyGOqMphqfS2qKu]
+2019-05-09 15:10:13.767 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [5] as [TIMESTAMP] - [Thu May 09 15:10:13 EAT 2019]
+2019-05-09 15:10:13.767 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [6] as [VARCHAR] - [Benja]
+2019-05-09 15:10:13.767 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [7] as [BOOLEAN] - [true]
+2019-05-09 15:10:13.768 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [8] as [INTEGER] - [20]
+2019-05-09 15:10:13.789 DEBUG afro-HP-ProBook-440-G5 --- [           main] o.h.SQL                                  : select users0_.user_id as user_id1_1_, users0_.first_name as first_na2_1_, users0_.id_no as id_no3_1_, users0_.msisdn as msisdn4_1_, users0_.password as password5_1_, users0_.registration_date as registra6_1_, users0_.second_name as second_n7_1_, users0_.status as status8_1_ from users users0_ where users0_.msisdn=?
+2019-05-09 15:10:13.790 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [1] as [VARCHAR] - [254721506974]
+2019-05-09 15:10:13.791 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([user_id1_1_] : [INTEGER]) - [0]
+2019-05-09 15:10:13.792 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([first_na2_1_] : [VARCHAR]) - [Amimo]
+2019-05-09 15:10:13.793 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([id_no3_1_] : [VARCHAR]) - [26089909]
+2019-05-09 15:10:13.793 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([msisdn4_1_] : [VARCHAR]) - [254721506974]
+2019-05-09 15:10:13.794 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([password5_1_] : [VARCHAR]) - [$2a$04$I9Q2sDc4QGGg5WNTLmsz0.fvGv3OjoZyj81PrSFyGOqMphqfS2qKu]
+2019-05-09 15:10:13.795 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([registra6_1_] : [TIMESTAMP]) - [2019-05-06 09:36:40.116]
+2019-05-09 15:10:13.795 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([second_n7_1_] : [VARCHAR]) - [Benja]
+2019-05-09 15:10:13.795 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([status8_1_] : [BOOLEAN]) - [true]
+2019-05-09 15:10:13.796 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([user_id1_1_] : [INTEGER]) - [18]
+2019-05-09 15:10:13.796 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([first_na2_1_] : [VARCHAR]) - [Amimo]
+2019-05-09 15:10:13.797 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([id_no3_1_] : [VARCHAR]) - [26089909]
+2019-05-09 15:10:13.797 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([msisdn4_1_] : [VARCHAR]) - [254721506974]
+2019-05-09 15:10:13.798 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([password5_1_] : [VARCHAR]) - [$2a$04$I9Q2sDc4QGGg5WNTLmsz0.fvGv3OjoZyj81PrSFyGOqMphqfS2qKu]
+2019-05-09 15:10:13.798 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([registra6_1_] : [TIMESTAMP]) - [2019-05-09 15:09:54.267]
+2019-05-09 15:10:13.799 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([second_n7_1_] : [VARCHAR]) - [Benja]
+2019-05-09 15:10:13.799 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([status8_1_] : [BOOLEAN]) - [true]
+2019-05-09 15:10:13.800 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([user_id1_1_] : [INTEGER]) - [19]
+2019-05-09 15:10:13.800 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([first_na2_1_] : [VARCHAR]) - [Amimo]
+2019-05-09 15:10:13.801 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([id_no3_1_] : [VARCHAR]) - [26089909]
+2019-05-09 15:10:13.801 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([msisdn4_1_] : [VARCHAR]) - [254721506974]
+2019-05-09 15:10:13.801 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([password5_1_] : [VARCHAR]) - [$2a$04$I9Q2sDc4QGGg5WNTLmsz0.fvGv3OjoZyj81PrSFyGOqMphqfS2qKu]
+2019-05-09 15:10:13.802 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([registra6_1_] : [TIMESTAMP]) - [2019-05-09 15:10:13.399]
+2019-05-09 15:10:13.802 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([second_n7_1_] : [VARCHAR]) - [Benja]
+2019-05-09 15:10:13.803 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([status8_1_] : [BOOLEAN]) - [true]
+2019-05-09 15:10:13.804 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([user_id1_1_] : [INTEGER]) - [20]
+2019-05-09 15:10:13.804 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([first_na2_1_] : [VARCHAR]) - [Amimo]
+2019-05-09 15:10:13.805 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([id_no3_1_] : [VARCHAR]) - [26089909]
+2019-05-09 15:10:13.805 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([msisdn4_1_] : [VARCHAR]) - [254721506974]
+2019-05-09 15:10:13.806 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([password5_1_] : [VARCHAR]) - [$2a$04$I9Q2sDc4QGGg5WNTLmsz0.fvGv3OjoZyj81PrSFyGOqMphqfS2qKu]
+2019-05-09 15:10:13.806 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([registra6_1_] : [TIMESTAMP]) - [2019-05-09 15:10:13.746]
+2019-05-09 15:10:13.807 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([second_n7_1_] : [VARCHAR]) - [Benja]
+2019-05-09 15:10:13.807 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([status8_1_] : [BOOLEAN]) - [true]
+2019-05-09 15:10:13.810 ERROR afro-HP-ProBook-440-G5 --- [           main] o.s.s.o.p.e.TokenEndpoint                : Handling error: InternalAuthenticationServiceException, query did not return a unique result: 4; nested exception is javax.persistence.NonUniqueResultException: query did not return a unique result: 4
+org.springframework.security.authentication.InternalAuthenticationServiceException: query did not return a unique result: 4; nested exception is javax.persistence.NonUniqueResultException: query did not return a unique result: 4
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:123)
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:144)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:175)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:503)
+	at org.springframework.security.oauth2.provider.password.ResourceOwnerPasswordTokenGranter.getOAuth2Authentication(ResourceOwnerPasswordTokenGranter.java:71)
+	at org.springframework.security.oauth2.provider.token.AbstractTokenGranter.getAccessToken(AbstractTokenGranter.java:72)
+	at org.springframework.security.oauth2.provider.token.AbstractTokenGranter.grant(AbstractTokenGranter.java:67)
+	at org.springframework.security.oauth2.provider.CompositeTokenGranter.grant(CompositeTokenGranter.java:38)
+	at org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerEndpointsConfigurer$4.grant(AuthorizationServerEndpointsConfigurer.java:583)
+	at org.springframework.security.oauth2.provider.endpoint.TokenEndpoint.postAccessToken(TokenEndpoint.java:132)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:189)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at org.springframework.test.web.servlet.TestDispatcherServlet.service(TestDispatcherServlet.java:71)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.springframework.mock.web.MockFilterChain$ServletFilterProxy.doFilter(MockFilterChain.java:166)
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:133)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:127)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:91)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:170)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:215)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:74)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:133)
+	at org.springframework.test.web.servlet.MockMvc.perform(MockMvc.java:182)
+	at ke.co.safaricom.www.MoviesMicroserviceApplicationTests.obtainAccessToken(MoviesMicroserviceApplicationTests.java:82)
+	at ke.co.safaricom.www.MoviesMicroserviceApplicationTests.contextLoads(MoviesMicroserviceApplicationTests.java:100)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestExecutionCallbacks.evaluate(RunBeforeTestExecutionCallbacks.java:74)
+	at org.springframework.test.context.junit4.statements.RunAfterTestExecutionCallbacks.evaluate(RunAfterTestExecutionCallbacks.java:84)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:251)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+Caused by: org.springframework.dao.IncorrectResultSizeDataAccessException: query did not return a unique result: 4; nested exception is javax.persistence.NonUniqueResultException: query did not return a unique result: 4
+	at org.springframework.orm.jpa.EntityManagerFactoryUtils.convertJpaAccessExceptionIfPossible(EntityManagerFactoryUtils.java:384)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:255)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:527)
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61)
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:242)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:153)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:138)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:93)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.repository.core.support.SurroundingTransactionDetectorMethodInterceptor.invoke(SurroundingTransactionDetectorMethodInterceptor.java:61)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy144.findByMsisdn(Unknown Source)
+	at ke.co.safaricom.www.entities.services.implementors.UserServiceImplementation.loadUserByUsername(UserServiceImplementation.java:31)
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:108)
+	... 97 more
+Caused by: javax.persistence.NonUniqueResultException: query did not return a unique result: 4
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:128)
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:181)
+	at org.hibernate.query.internal.AbstractProducedQuery.getSingleResult(AbstractProducedQuery.java:1561)
+	at org.hibernate.query.criteria.internal.compile.CriteriaQueryTypeQueryAdapter.getSingleResult(CriteriaQueryTypeQueryAdapter.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$DeferredQueryInvocationHandler.invoke(SharedEntityManagerCreator.java:402)
+	at com.sun.proxy.$Proxy183.getSingleResult(Unknown Source)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution$SingleEntityExecution.doExecute(JpaQueryExecution.java:214)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:91)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:136)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:125)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.doInvoke(RepositoryFactorySupport.java:605)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.lambda$invoke$3(RepositoryFactorySupport.java:595)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.invoke(RepositoryFactorySupport.java:595)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:59)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	... 108 more
+2019-05-09 15:10:13.887  INFO afro-HP-ProBook-440-G5 --- [       Thread-6] o.s.s.c.ThreadPoolTaskExecutor           : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-05-09 15:10:13.896  INFO afro-HP-ProBook-440-G5 --- [       Thread-6] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-05-09 15:10:16.668  INFO afro-HP-ProBook-440-G5 --- [       Thread-6] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
+2019-05-09 15:10:16.682  INFO afro-HP-ProBook-440-G5 --- [       Thread-6] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.
+2019-05-09 15:12:07.835  INFO afro-HP-ProBook-440-G5 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [ke.co.safaricom.www.MoviesMicroserviceApplicationTests], using SpringBootContextLoader
+2019-05-09 15:12:07.864  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.t.c.s.AbstractContextLoader          : Could not detect default resource locations for test class [ke.co.safaricom.www.MoviesMicroserviceApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2019-05-09 15:12:07.867  INFO afro-HP-ProBook-440-G5 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [ke.co.safaricom.www.MoviesMicroserviceApplicationTests]: MoviesMicroserviceApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2019-05-09 15:12:08.182  INFO afro-HP-ProBook-440-G5 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration ke.co.safaricom.www.MoviesMicroserviceApplication for test class ke.co.safaricom.www.MoviesMicroserviceApplicationTests
+2019-05-09 15:12:08.490  INFO afro-HP-ProBook-440-G5 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener]
+2019-05-09 15:12:08.553  INFO afro-HP-ProBook-440-G5 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@a08e41b, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@e08d871, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@4ebb7bab, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@33845e3d, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7e615c6a, org.springframework.test.context.transaction.TransactionalTestExecutionListener@3662c887, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@23119bc3, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@32f54c2a, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@4603c412, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@66851aa5, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@49654a35, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@5169db2f, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@912a644]
+2019-05-09 15:12:10.143  INFO afro-HP-ProBook-440-G5 --- [           main] c.s.w.MoviesMicroserviceApplicationTests : Starting MoviesMicroserviceApplicationTests on afro-HP-ProBook-440-G5 with PID 27238 (started by afro in /media/afro/TKL1/Hackathon/movies/movies-microservice)
+2019-05-09 15:12:10.148 DEBUG afro-HP-ProBook-440-G5 --- [           main] c.s.w.MoviesMicroserviceApplicationTests : Running with Spring Boot v2.1.4.RELEASE, Spring v5.1.6.RELEASE
+2019-05-09 15:12:10.150  INFO afro-HP-ProBook-440-G5 --- [           main] c.s.w.MoviesMicroserviceApplicationTests : No active profile set, falling back to default profiles: default
+2019-05-09 15:12:12.595  INFO afro-HP-ProBook-440-G5 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-05-09 15:12:12.788  INFO afro-HP-ProBook-440-G5 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 177ms. Found 2 repository interfaces.
+2019-05-09 15:12:14.032  INFO afro-HP-ProBook-440-G5 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$fde0b55d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-09 15:12:14.192  INFO afro-HP-ProBook-440-G5 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$968e7d97] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-09 15:12:14.211  INFO afro-HP-ProBook-440-G5 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-09 15:12:14.215  INFO afro-HP-ProBook-440-G5 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@5c1a0714' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-09 15:12:14.228  INFO afro-HP-ProBook-440-G5 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$bb632049] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-09 15:12:14.249  INFO afro-HP-ProBook-440-G5 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-09 15:12:14.758  INFO afro-HP-ProBook-440-G5 --- [           main] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2019-05-09 15:12:15.283  INFO afro-HP-ProBook-440-G5 --- [           main] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2019-05-09 15:12:15.501  INFO afro-HP-ProBook-440-G5 --- [           main] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-05-09 15:12:15.717  INFO afro-HP-ProBook-440-G5 --- [           main] o.h.Version                              : HHH000412: Hibernate Core {5.3.9.Final}
+2019-05-09 15:12:15.723  INFO afro-HP-ProBook-440-G5 --- [           main] o.h.c.Environment                        : HHH000206: hibernate.properties not found
+2019-05-09 15:12:16.075  INFO afro-HP-ProBook-440-G5 --- [           main] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-05-09 15:12:16.505  INFO afro-HP-ProBook-440-G5 --- [           main] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2019-05-09 15:12:16.832  INFO afro-HP-ProBook-440-G5 --- [           main] o.h.e.j.e.i.LobCreatorBuilderImpl        : HHH000421: Disabling contextual LOB creation as hibernate.jdbc.lob.non_contextual_creation is true
+2019-05-09 15:12:16.846  INFO afro-HP-ProBook-440-G5 --- [           main] o.h.t.BasicTypeRegistry                  : HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@3e929c9c
+2019-05-09 15:12:18.640  INFO afro-HP-ProBook-440-G5 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-05-09 15:12:21.595  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.s.w.DefaultSecurityFilterChain       : Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/oauth/token'], Ant [pattern='/oauth/token_key'], Ant [pattern='/oauth/check_token']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@56b5b337, org.springframework.security.web.context.SecurityContextPersistenceFilter@412a57b4, org.springframework.security.web.header.HeaderWriterFilter@6122963f, org.springframework.security.web.authentication.logout.LogoutFilter@23dcf288, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@64e6379f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@9f28f3f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5d0d02f5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1dc02a38, org.springframework.security.web.session.SessionManagementFilter@261b7b2, org.springframework.security.web.access.ExceptionTranslationFilter@4495532a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6c8291b]
+2019-05-09 15:12:21.636  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.s.w.DefaultSecurityFilterChain       : Creating filter chain: org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfiguration$NotOAuthRequestMatcher@3f67f2ff, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@38cbf615, org.springframework.security.web.context.SecurityContextPersistenceFilter@288676e9, org.springframework.security.web.header.HeaderWriterFilter@7d0b726d, org.springframework.security.web.authentication.logout.LogoutFilter@30c55d6d, org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter@254e0411, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@47646f48, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@615af5d3, org.springframework.security.web.session.SessionManagementFilter@1d5992ff, org.springframework.security.web.access.ExceptionTranslationFilter@6f8011a0, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6fbc3193]
+2019-05-09 15:12:21.644  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.s.w.DefaultSecurityFilterChain       : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@75386034, org.springframework.security.web.context.SecurityContextPersistenceFilter@42a79d37, org.springframework.security.web.header.HeaderWriterFilter@20d2ad1b, org.springframework.security.web.authentication.logout.LogoutFilter@3d0dd8f5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@123eb133, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@27b17c1a, org.springframework.security.web.session.SessionManagementFilter@2d56fe1f, org.springframework.security.web.access.ExceptionTranslationFilter@70e405bd, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5b097097]
+2019-05-09 15:12:23.027  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-09 15:12:23.178  WARN afro-HP-ProBook-440-G5 --- [           main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-05-09 15:12:25.130  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 2 endpoint(s) beneath base path '/actuator'
+2019-05-09 15:12:25.474  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2019-05-09 15:12:25.475  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.t.w.s.TestDispatcherServlet          : Initializing Servlet ''
+2019-05-09 15:12:25.508  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.t.w.s.TestDispatcherServlet          : Completed initialization in 33 ms
+2019-05-09 15:12:25.658  INFO afro-HP-ProBook-440-G5 --- [           main] c.s.w.MoviesMicroserviceApplicationTests : Started MoviesMicroserviceApplicationTests in 16.407 seconds (JVM running for 20.336)
+2019-05-09 15:12:25.877  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2019-05-09 15:12:25.878  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.t.w.s.TestDispatcherServlet          : Initializing Servlet ''
+2019-05-09 15:12:25.884  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.t.w.s.TestDispatcherServlet          : Completed initialization in 6 ms
+2019-05-09 15:12:26.468  INFO afro-HP-ProBook-440-G5 --- [           main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-05-09 15:12:26.829 DEBUG afro-HP-ProBook-440-G5 --- [           main] o.h.SQL                                  : select users0_.user_id as user_id1_1_, users0_.first_name as first_na2_1_, users0_.id_no as id_no3_1_, users0_.msisdn as msisdn4_1_, users0_.password as password5_1_, users0_.registration_date as registra6_1_, users0_.second_name as second_n7_1_, users0_.status as status8_1_ from users users0_ where users0_.msisdn=?
+2019-05-09 15:12:26.841 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [1] as [VARCHAR] - [254721506974]
+2019-05-09 15:12:26.986  WARN afro-HP-ProBook-440-G5 --- [           main] o.s.s.o.p.e.TokenEndpoint                : Handling error: InvalidGrantException, Bad credentials
+2019-05-09 15:12:27.130  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2019-05-09 15:12:27.131  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.t.w.s.TestDispatcherServlet          : Initializing Servlet ''
+2019-05-09 15:12:27.138  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.t.w.s.TestDispatcherServlet          : Completed initialization in 7 ms
+2019-05-09 15:12:27.150  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2019-05-09 15:12:27.150  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.t.w.s.TestDispatcherServlet          : Initializing Servlet ''
+2019-05-09 15:12:27.158  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.t.w.s.TestDispatcherServlet          : Completed initialization in 7 ms
+2019-05-09 15:12:27.186 DEBUG afro-HP-ProBook-440-G5 --- [           main] o.h.SQL                                  : select nextval ('hibernate_sequence')
+2019-05-09 15:12:27.308 DEBUG afro-HP-ProBook-440-G5 --- [           main] o.h.SQL                                  : insert into users (first_name, id_no, msisdn, password, registration_date, second_name, status, user_id) values (?, ?, ?, ?, ?, ?, ?, ?)
+2019-05-09 15:12:27.309 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [1] as [VARCHAR] - [Amimo]
+2019-05-09 15:12:27.310 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [2] as [VARCHAR] - [26089909]
+2019-05-09 15:12:27.311 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [3] as [VARCHAR] - [254721506974]
+2019-05-09 15:12:27.312 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [4] as [VARCHAR] - [$2a$04$I9Q2sDc4QGGg5WNTLmsz0.fvGv3OjoZyj81PrSFyGOqMphqfS2qKu]
+2019-05-09 15:12:27.320 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [5] as [TIMESTAMP] - [Thu May 09 15:12:27 EAT 2019]
+2019-05-09 15:12:27.323 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [6] as [VARCHAR] - [Benja]
+2019-05-09 15:12:27.326 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [7] as [BOOLEAN] - [true]
+2019-05-09 15:12:27.328 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [8] as [INTEGER] - [21]
+2019-05-09 15:12:27.361 DEBUG afro-HP-ProBook-440-G5 --- [           main] o.h.SQL                                  : select users0_.user_id as user_id1_1_, users0_.first_name as first_na2_1_, users0_.id_no as id_no3_1_, users0_.msisdn as msisdn4_1_, users0_.password as password5_1_, users0_.registration_date as registra6_1_, users0_.second_name as second_n7_1_, users0_.status as status8_1_ from users users0_ where users0_.msisdn=?
+2019-05-09 15:12:27.362 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [1] as [VARCHAR] - [254721506974]
+2019-05-09 15:12:27.369 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([user_id1_1_] : [INTEGER]) - [21]
+2019-05-09 15:12:27.380 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([first_na2_1_] : [VARCHAR]) - [Amimo]
+2019-05-09 15:12:27.381 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([id_no3_1_] : [VARCHAR]) - [26089909]
+2019-05-09 15:12:27.382 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([msisdn4_1_] : [VARCHAR]) - [254721506974]
+2019-05-09 15:12:27.383 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([password5_1_] : [VARCHAR]) - [$2a$04$I9Q2sDc4QGGg5WNTLmsz0.fvGv3OjoZyj81PrSFyGOqMphqfS2qKu]
+2019-05-09 15:12:27.388 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([registra6_1_] : [TIMESTAMP]) - [2019-05-09 15:12:27.146]
+2019-05-09 15:12:27.389 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([second_n7_1_] : [VARCHAR]) - [Benja]
+2019-05-09 15:12:27.392 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([status8_1_] : [BOOLEAN]) - [true]
+2019-05-09 15:12:27.869  INFO afro-HP-ProBook-440-G5 --- [           main] k.c.s.w.c.MoviesController               : REGISTRATION REQUEST RECEIVED.
+2019-05-09 15:12:27.873 DEBUG afro-HP-ProBook-440-G5 --- [           main] k.c.s.w.v.UserValidator                  :  - Starting the validation process.
+2019-05-09 15:12:27.921 DEBUG afro-HP-ProBook-440-G5 --- [           main] o.h.SQL                                  : select users0_.user_id as user_id1_1_, users0_.first_name as first_na2_1_, users0_.id_no as id_no3_1_, users0_.msisdn as msisdn4_1_, users0_.password as password5_1_, users0_.registration_date as registra6_1_, users0_.second_name as second_n7_1_, users0_.status as status8_1_ from users users0_ where users0_.msisdn=? and users0_.password=? and users0_.status=?
+2019-05-09 15:12:27.923 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [1] as [VARCHAR] - [254725506974]
+2019-05-09 15:12:27.924 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [2] as [VARCHAR] - [26189909]
+2019-05-09 15:12:27.925 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [3] as [BOOLEAN] - [true]
+2019-05-09 15:12:27.928 DEBUG afro-HP-ProBook-440-G5 --- [           main] k.c.s.w.v.UserValidator                  :  - Entity Object is valid.
+2019-05-09 15:12:28.105 DEBUG afro-HP-ProBook-440-G5 --- [           main] o.h.SQL                                  : select nextval ('hibernate_sequence')
+2019-05-09 15:12:28.108 DEBUG afro-HP-ProBook-440-G5 --- [           main] o.h.SQL                                  : insert into users (first_name, id_no, msisdn, password, registration_date, second_name, status, user_id) values (?, ?, ?, ?, ?, ?, ?, ?)
+2019-05-09 15:12:28.108 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [1] as [VARCHAR] - [Nicholus]
+2019-05-09 15:12:28.109 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [2] as [VARCHAR] - [26189909]
+2019-05-09 15:12:28.109 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [3] as [VARCHAR] - [254725506974]
+2019-05-09 15:12:28.109 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [4] as [VARCHAR] - [$2a$10$v8z.hn8eQya4PxLasR2T6uSBLoJHyAP7Bh6P98R4O0xVmIT/tfini]
+2019-05-09 15:12:28.110 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [5] as [TIMESTAMP] - [Thu May 09 15:12:27 EAT 2019]
+2019-05-09 15:12:28.110 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [6] as [VARCHAR] - [Owenje]
+2019-05-09 15:12:28.111 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [7] as [BOOLEAN] - [true]
+2019-05-09 15:12:28.111 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [8] as [INTEGER] - [22]
+2019-05-09 15:12:28.193  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2019-05-09 15:12:28.193  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.t.w.s.TestDispatcherServlet          : Initializing Servlet ''
+2019-05-09 15:12:28.199  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.t.w.s.TestDispatcherServlet          : Completed initialization in 6 ms
+2019-05-09 15:12:28.456  INFO afro-HP-ProBook-440-G5 --- [       Thread-6] o.s.s.c.ThreadPoolTaskExecutor           : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-05-09 15:12:28.479  INFO afro-HP-ProBook-440-G5 --- [       Thread-6] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-05-09 15:12:31.153  INFO afro-HP-ProBook-440-G5 --- [       Thread-6] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
+2019-05-09 15:12:31.171  INFO afro-HP-ProBook-440-G5 --- [       Thread-6] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.
+2019-05-09 15:16:56.292  INFO afro-HP-ProBook-440-G5 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [ke.co.safaricom.www.MoviesMicroserviceApplicationTests], using SpringBootContextLoader
+2019-05-09 15:16:56.316  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.t.c.s.AbstractContextLoader          : Could not detect default resource locations for test class [ke.co.safaricom.www.MoviesMicroserviceApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2019-05-09 15:16:56.318  INFO afro-HP-ProBook-440-G5 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [ke.co.safaricom.www.MoviesMicroserviceApplicationTests]: MoviesMicroserviceApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2019-05-09 15:16:56.642  INFO afro-HP-ProBook-440-G5 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration ke.co.safaricom.www.MoviesMicroserviceApplication for test class ke.co.safaricom.www.MoviesMicroserviceApplicationTests
+2019-05-09 15:16:56.976  INFO afro-HP-ProBook-440-G5 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener]
+2019-05-09 15:16:57.043  INFO afro-HP-ProBook-440-G5 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@4ebb7bab, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@33845e3d, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@7e615c6a, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@3662c887, org.springframework.test.context.support.DirtiesContextTestExecutionListener@23119bc3, org.springframework.test.context.transaction.TransactionalTestExecutionListener@32f54c2a, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@4603c412, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@66851aa5, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@49654a35, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@5169db2f, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@912a644, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@478cc5f1, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@245b0bd7]
+2019-05-09 15:16:58.833  INFO afro-HP-ProBook-440-G5 --- [           main] c.s.w.MoviesMicroserviceApplicationTests : Starting MoviesMicroserviceApplicationTests on afro-HP-ProBook-440-G5 with PID 27469 (started by afro in /media/afro/TKL1/Hackathon/movies/movies-microservice)
+2019-05-09 15:16:58.839 DEBUG afro-HP-ProBook-440-G5 --- [           main] c.s.w.MoviesMicroserviceApplicationTests : Running with Spring Boot v2.1.4.RELEASE, Spring v5.1.6.RELEASE
+2019-05-09 15:16:58.841  INFO afro-HP-ProBook-440-G5 --- [           main] c.s.w.MoviesMicroserviceApplicationTests : No active profile set, falling back to default profiles: default
+2019-05-09 15:17:01.272  INFO afro-HP-ProBook-440-G5 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-05-09 15:17:01.465  INFO afro-HP-ProBook-440-G5 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 175ms. Found 2 repository interfaces.
+2019-05-09 15:17:02.658  INFO afro-HP-ProBook-440-G5 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$dfe07813] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-09 15:17:02.766  INFO afro-HP-ProBook-440-G5 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$788e404d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-09 15:17:02.790  INFO afro-HP-ProBook-440-G5 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-09 15:17:02.794  INFO afro-HP-ProBook-440-G5 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@711cf3c' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-09 15:17:02.813  INFO afro-HP-ProBook-440-G5 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$9d62e2ff] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-09 15:17:02.829  INFO afro-HP-ProBook-440-G5 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-09 15:17:03.335  INFO afro-HP-ProBook-440-G5 --- [           main] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2019-05-09 15:17:03.907  INFO afro-HP-ProBook-440-G5 --- [           main] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2019-05-09 15:17:04.097  INFO afro-HP-ProBook-440-G5 --- [           main] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-05-09 15:17:04.297  INFO afro-HP-ProBook-440-G5 --- [           main] o.h.Version                              : HHH000412: Hibernate Core {5.3.9.Final}
+2019-05-09 15:17:04.301  INFO afro-HP-ProBook-440-G5 --- [           main] o.h.c.Environment                        : HHH000206: hibernate.properties not found
+2019-05-09 15:17:04.669  INFO afro-HP-ProBook-440-G5 --- [           main] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-05-09 15:17:05.178  INFO afro-HP-ProBook-440-G5 --- [           main] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2019-05-09 15:17:05.489  INFO afro-HP-ProBook-440-G5 --- [           main] o.h.e.j.e.i.LobCreatorBuilderImpl        : HHH000421: Disabling contextual LOB creation as hibernate.jdbc.lob.non_contextual_creation is true
+2019-05-09 15:17:05.506  INFO afro-HP-ProBook-440-G5 --- [           main] o.h.t.BasicTypeRegistry                  : HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@1ba2da7b
+2019-05-09 15:17:07.637  INFO afro-HP-ProBook-440-G5 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-05-09 15:17:10.746  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.s.w.DefaultSecurityFilterChain       : Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/oauth/token'], Ant [pattern='/oauth/token_key'], Ant [pattern='/oauth/check_token']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@13cb6d93, org.springframework.security.web.context.SecurityContextPersistenceFilter@43ab1706, org.springframework.security.web.header.HeaderWriterFilter@64bb7237, org.springframework.security.web.authentication.logout.LogoutFilter@49b11293, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7b651540, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6b629cc7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7bf8c66, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7be3bd78, org.springframework.security.web.session.SessionManagementFilter@73599cf0, org.springframework.security.web.access.ExceptionTranslationFilter@1c33043d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4a04a28f]
+2019-05-09 15:17:10.792  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.s.w.DefaultSecurityFilterChain       : Creating filter chain: org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfiguration$NotOAuthRequestMatcher@f96e056, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@119e720d, org.springframework.security.web.context.SecurityContextPersistenceFilter@5ba2a214, org.springframework.security.web.header.HeaderWriterFilter@78cd03b5, org.springframework.security.web.authentication.logout.LogoutFilter@5b9ff633, org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter@12e68cfb, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@47afd2b2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@576fb159, org.springframework.security.web.session.SessionManagementFilter@20759126, org.springframework.security.web.access.ExceptionTranslationFilter@1dc02a38, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@41effced]
+2019-05-09 15:17:10.800  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.s.w.DefaultSecurityFilterChain       : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@254e0411, org.springframework.security.web.context.SecurityContextPersistenceFilter@3ff6421f, org.springframework.security.web.header.HeaderWriterFilter@7b842d4c, org.springframework.security.web.authentication.logout.LogoutFilter@f65bcd, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5949e0e1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@37d48c9, org.springframework.security.web.session.SessionManagementFilter@1b530b60, org.springframework.security.web.access.ExceptionTranslationFilter@123e8cec, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@408d8dc1]
+2019-05-09 15:17:12.420  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-09 15:17:12.579  WARN afro-HP-ProBook-440-G5 --- [           main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-05-09 15:17:14.651  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 2 endpoint(s) beneath base path '/actuator'
+2019-05-09 15:17:15.024  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2019-05-09 15:17:15.024  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.t.w.s.TestDispatcherServlet          : Initializing Servlet ''
+2019-05-09 15:17:15.065  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.t.w.s.TestDispatcherServlet          : Completed initialization in 40 ms
+2019-05-09 15:17:15.179  INFO afro-HP-ProBook-440-G5 --- [           main] c.s.w.MoviesMicroserviceApplicationTests : Started MoviesMicroserviceApplicationTests in 17.336 seconds (JVM running for 21.239)
+2019-05-09 15:17:15.381  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2019-05-09 15:17:15.382  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.t.w.s.TestDispatcherServlet          : Initializing Servlet ''
+2019-05-09 15:17:15.392  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.t.w.s.TestDispatcherServlet          : Completed initialization in 9 ms
+2019-05-09 15:17:15.443 DEBUG afro-HP-ProBook-440-G5 --- [           main] o.h.SQL                                  : select nextval ('hibernate_sequence')
+2019-05-09 15:17:15.555 DEBUG afro-HP-ProBook-440-G5 --- [           main] o.h.SQL                                  : insert into users (first_name, id_no, msisdn, password, registration_date, second_name, status, user_id) values (?, ?, ?, ?, ?, ?, ?, ?)
+2019-05-09 15:17:15.560 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [1] as [VARCHAR] - [Amimo]
+2019-05-09 15:17:15.561 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [2] as [VARCHAR] - [26089909]
+2019-05-09 15:17:15.561 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [3] as [VARCHAR] - [254721506974]
+2019-05-09 15:17:15.561 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [4] as [VARCHAR] - [$2a$04$I9Q2sDc4QGGg5WNTLmsz0.fvGv3OjoZyj81PrSFyGOqMphqfS2qKu]
+2019-05-09 15:17:15.567 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [5] as [TIMESTAMP] - [Thu May 09 15:16:57 EAT 2019]
+2019-05-09 15:17:15.570 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [6] as [VARCHAR] - [Benja]
+2019-05-09 15:17:15.571 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [7] as [BOOLEAN] - [true]
+2019-05-09 15:17:15.573 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [8] as [INTEGER] - [23]
+2019-05-09 15:17:16.024  INFO afro-HP-ProBook-440-G5 --- [           main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-05-09 15:17:16.361 DEBUG afro-HP-ProBook-440-G5 --- [           main] o.h.SQL                                  : select users0_.user_id as user_id1_1_, users0_.first_name as first_na2_1_, users0_.id_no as id_no3_1_, users0_.msisdn as msisdn4_1_, users0_.password as password5_1_, users0_.registration_date as registra6_1_, users0_.second_name as second_n7_1_, users0_.status as status8_1_ from users users0_ where users0_.msisdn=?
+2019-05-09 15:17:16.364 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [1] as [VARCHAR] - [254721506974]
+2019-05-09 15:17:16.369 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([user_id1_1_] : [INTEGER]) - [23]
+2019-05-09 15:17:16.375 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([first_na2_1_] : [VARCHAR]) - [Amimo]
+2019-05-09 15:17:16.375 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([id_no3_1_] : [VARCHAR]) - [26089909]
+2019-05-09 15:17:16.376 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([msisdn4_1_] : [VARCHAR]) - [254721506974]
+2019-05-09 15:17:16.376 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([password5_1_] : [VARCHAR]) - [$2a$04$I9Q2sDc4QGGg5WNTLmsz0.fvGv3OjoZyj81PrSFyGOqMphqfS2qKu]
+2019-05-09 15:17:16.379 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([registra6_1_] : [TIMESTAMP]) - [2019-05-09 15:16:57.76]
+2019-05-09 15:17:16.380 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([second_n7_1_] : [VARCHAR]) - [Benja]
+2019-05-09 15:17:16.381 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([status8_1_] : [BOOLEAN]) - [true]
+2019-05-09 15:17:16.997  INFO afro-HP-ProBook-440-G5 --- [           main] k.c.s.w.c.MoviesController               : REGISTRATION REQUEST RECEIVED.
+2019-05-09 15:17:17.000 DEBUG afro-HP-ProBook-440-G5 --- [           main] k.c.s.w.v.UserValidator                  :  - Starting the validation process.
+2019-05-09 15:17:17.075 DEBUG afro-HP-ProBook-440-G5 --- [           main] o.h.SQL                                  : select users0_.user_id as user_id1_1_, users0_.first_name as first_na2_1_, users0_.id_no as id_no3_1_, users0_.msisdn as msisdn4_1_, users0_.password as password5_1_, users0_.registration_date as registra6_1_, users0_.second_name as second_n7_1_, users0_.status as status8_1_ from users users0_ where users0_.msisdn=?
+2019-05-09 15:17:17.076 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [1] as [VARCHAR] - [254721506974]
+2019-05-09 15:17:17.077 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([user_id1_1_] : [INTEGER]) - [23]
+2019-05-09 15:17:17.078 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([first_na2_1_] : [VARCHAR]) - [Amimo]
+2019-05-09 15:17:17.079 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([id_no3_1_] : [VARCHAR]) - [26089909]
+2019-05-09 15:17:17.079 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([msisdn4_1_] : [VARCHAR]) - [254721506974]
+2019-05-09 15:17:17.080 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([password5_1_] : [VARCHAR]) - [$2a$04$I9Q2sDc4QGGg5WNTLmsz0.fvGv3OjoZyj81PrSFyGOqMphqfS2qKu]
+2019-05-09 15:17:17.080 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([registra6_1_] : [TIMESTAMP]) - [2019-05-09 15:16:57.76]
+2019-05-09 15:17:17.081 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([second_n7_1_] : [VARCHAR]) - [Benja]
+2019-05-09 15:17:17.081 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([status8_1_] : [BOOLEAN]) - [true]
+2019-05-09 15:17:17.097 DEBUG afro-HP-ProBook-440-G5 --- [           main] o.h.SQL                                  : select users0_.user_id as user_id1_1_0_, users0_.first_name as first_na2_1_0_, users0_.id_no as id_no3_1_0_, users0_.msisdn as msisdn4_1_0_, users0_.password as password5_1_0_, users0_.registration_date as registra6_1_0_, users0_.second_name as second_n7_1_0_, users0_.status as status8_1_0_ from users users0_ where users0_.user_id=?
+2019-05-09 15:17:17.098 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [1] as [INTEGER] - [23]
+2019-05-09 15:17:17.107 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([first_na2_1_0_] : [VARCHAR]) - [Amimo]
+2019-05-09 15:17:17.108 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([id_no3_1_0_] : [VARCHAR]) - [26089909]
+2019-05-09 15:17:17.108 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([msisdn4_1_0_] : [VARCHAR]) - [254721506974]
+2019-05-09 15:17:17.109 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([password5_1_0_] : [VARCHAR]) - [$2a$04$I9Q2sDc4QGGg5WNTLmsz0.fvGv3OjoZyj81PrSFyGOqMphqfS2qKu]
+2019-05-09 15:17:17.109 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([registra6_1_0_] : [TIMESTAMP]) - [2019-05-09 15:16:57.76]
+2019-05-09 15:17:17.110 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([second_n7_1_0_] : [VARCHAR]) - [Benja]
+2019-05-09 15:17:17.110 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([status8_1_0_] : [BOOLEAN]) - [true]
+2019-05-09 15:17:17.131 DEBUG afro-HP-ProBook-440-G5 --- [           main] o.h.SQL                                  : delete from users where user_id=?
+2019-05-09 15:17:17.132 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [1] as [INTEGER] - [23]
+2019-05-09 15:17:17.177  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2019-05-09 15:17:17.178  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.t.w.s.TestDispatcherServlet          : Initializing Servlet ''
+2019-05-09 15:17:17.184  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.t.w.s.TestDispatcherServlet          : Completed initialization in 6 ms
+2019-05-09 15:17:17.207  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2019-05-09 15:17:17.207  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.t.w.s.TestDispatcherServlet          : Initializing Servlet ''
+2019-05-09 15:17:17.213  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.t.w.s.TestDispatcherServlet          : Completed initialization in 5 ms
+2019-05-09 15:17:17.215 DEBUG afro-HP-ProBook-440-G5 --- [           main] o.h.SQL                                  : select nextval ('hibernate_sequence')
+2019-05-09 15:17:17.218 DEBUG afro-HP-ProBook-440-G5 --- [           main] o.h.SQL                                  : insert into users (first_name, id_no, msisdn, password, registration_date, second_name, status, user_id) values (?, ?, ?, ?, ?, ?, ?, ?)
+2019-05-09 15:17:17.219 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [1] as [VARCHAR] - [Amimo]
+2019-05-09 15:17:17.220 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [2] as [VARCHAR] - [26089909]
+2019-05-09 15:17:17.220 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [3] as [VARCHAR] - [254721506974]
+2019-05-09 15:17:17.221 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [4] as [VARCHAR] - [$2a$04$I9Q2sDc4QGGg5WNTLmsz0.fvGv3OjoZyj81PrSFyGOqMphqfS2qKu]
+2019-05-09 15:17:17.222 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [5] as [TIMESTAMP] - [Thu May 09 15:17:17 EAT 2019]
+2019-05-09 15:17:17.222 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [6] as [VARCHAR] - [Benja]
+2019-05-09 15:17:17.223 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [7] as [BOOLEAN] - [true]
+2019-05-09 15:17:17.224 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [8] as [INTEGER] - [24]
+2019-05-09 15:17:17.239 DEBUG afro-HP-ProBook-440-G5 --- [           main] o.h.SQL                                  : select users0_.user_id as user_id1_1_, users0_.first_name as first_na2_1_, users0_.id_no as id_no3_1_, users0_.msisdn as msisdn4_1_, users0_.password as password5_1_, users0_.registration_date as registra6_1_, users0_.second_name as second_n7_1_, users0_.status as status8_1_ from users users0_ where users0_.msisdn=?
+2019-05-09 15:17:17.241 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [1] as [VARCHAR] - [254721506974]
+2019-05-09 15:17:17.242 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([user_id1_1_] : [INTEGER]) - [24]
+2019-05-09 15:17:17.243 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([first_na2_1_] : [VARCHAR]) - [Amimo]
+2019-05-09 15:17:17.244 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([id_no3_1_] : [VARCHAR]) - [26089909]
+2019-05-09 15:17:17.244 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([msisdn4_1_] : [VARCHAR]) - [254721506974]
+2019-05-09 15:17:17.244 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([password5_1_] : [VARCHAR]) - [$2a$04$I9Q2sDc4QGGg5WNTLmsz0.fvGv3OjoZyj81PrSFyGOqMphqfS2qKu]
+2019-05-09 15:17:17.245 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([registra6_1_] : [TIMESTAMP]) - [2019-05-09 15:17:17.204]
+2019-05-09 15:17:17.245 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([second_n7_1_] : [VARCHAR]) - [Benja]
+2019-05-09 15:17:17.246 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([status8_1_] : [BOOLEAN]) - [true]
+2019-05-09 15:17:17.287  INFO afro-HP-ProBook-440-G5 --- [           main] k.c.s.w.c.MoviesController               : REGISTRATION REQUEST RECEIVED.
+2019-05-09 15:17:17.287 DEBUG afro-HP-ProBook-440-G5 --- [           main] k.c.s.w.v.UserValidator                  :  - Starting the validation process.
+2019-05-09 15:17:17.298 DEBUG afro-HP-ProBook-440-G5 --- [           main] o.h.SQL                                  : select users0_.user_id as user_id1_1_, users0_.first_name as first_na2_1_, users0_.id_no as id_no3_1_, users0_.msisdn as msisdn4_1_, users0_.password as password5_1_, users0_.registration_date as registra6_1_, users0_.second_name as second_n7_1_, users0_.status as status8_1_ from users users0_ where users0_.msisdn=? and users0_.password=? and users0_.status=?
+2019-05-09 15:17:17.299 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [1] as [VARCHAR] - [254725506974]
+2019-05-09 15:17:17.299 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [2] as [VARCHAR] - [26189909]
+2019-05-09 15:17:17.300 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [3] as [BOOLEAN] - [true]
+2019-05-09 15:17:17.303 DEBUG afro-HP-ProBook-440-G5 --- [           main] k.c.s.w.v.UserValidator                  :  - Entity Object is valid.
+2019-05-09 15:17:17.454 DEBUG afro-HP-ProBook-440-G5 --- [           main] o.h.SQL                                  : select nextval ('hibernate_sequence')
+2019-05-09 15:17:17.458 DEBUG afro-HP-ProBook-440-G5 --- [           main] o.h.SQL                                  : insert into users (first_name, id_no, msisdn, password, registration_date, second_name, status, user_id) values (?, ?, ?, ?, ?, ?, ?, ?)
+2019-05-09 15:17:17.458 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [1] as [VARCHAR] - [Nicholus]
+2019-05-09 15:17:17.459 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [2] as [VARCHAR] - [26189909]
+2019-05-09 15:17:17.460 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [3] as [VARCHAR] - [254725506974]
+2019-05-09 15:17:17.460 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [4] as [VARCHAR] - [$2a$10$ZrAT0JQRIOmYxCeHgNYtTO5f1N5XvehZ.KAtvhwlIa7Iz1zLWkFaC]
+2019-05-09 15:17:17.461 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [5] as [TIMESTAMP] - [Thu May 09 15:17:17 EAT 2019]
+2019-05-09 15:17:17.461 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [6] as [VARCHAR] - [Owenje]
+2019-05-09 15:17:17.462 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [7] as [BOOLEAN] - [true]
+2019-05-09 15:17:17.462 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [8] as [INTEGER] - [25]
+2019-05-09 15:17:17.550 DEBUG afro-HP-ProBook-440-G5 --- [           main] o.h.SQL                                  : select users0_.user_id as user_id1_1_, users0_.first_name as first_na2_1_, users0_.id_no as id_no3_1_, users0_.msisdn as msisdn4_1_, users0_.password as password5_1_, users0_.registration_date as registra6_1_, users0_.second_name as second_n7_1_, users0_.status as status8_1_ from users users0_ where users0_.msisdn=?
+2019-05-09 15:17:17.551 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [1] as [VARCHAR] - [254721506974]
+2019-05-09 15:17:17.553 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([user_id1_1_] : [INTEGER]) - [24]
+2019-05-09 15:17:17.554 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([first_na2_1_] : [VARCHAR]) - [Amimo]
+2019-05-09 15:17:17.554 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([id_no3_1_] : [VARCHAR]) - [26089909]
+2019-05-09 15:17:17.555 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([msisdn4_1_] : [VARCHAR]) - [254721506974]
+2019-05-09 15:17:17.555 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([password5_1_] : [VARCHAR]) - [$2a$04$I9Q2sDc4QGGg5WNTLmsz0.fvGv3OjoZyj81PrSFyGOqMphqfS2qKu]
+2019-05-09 15:17:17.556 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([registra6_1_] : [TIMESTAMP]) - [2019-05-09 15:17:17.204]
+2019-05-09 15:17:17.556 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([second_n7_1_] : [VARCHAR]) - [Benja]
+2019-05-09 15:17:17.557 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([status8_1_] : [BOOLEAN]) - [true]
+2019-05-09 15:17:17.560 DEBUG afro-HP-ProBook-440-G5 --- [           main] o.h.SQL                                  : select users0_.user_id as user_id1_1_0_, users0_.first_name as first_na2_1_0_, users0_.id_no as id_no3_1_0_, users0_.msisdn as msisdn4_1_0_, users0_.password as password5_1_0_, users0_.registration_date as registra6_1_0_, users0_.second_name as second_n7_1_0_, users0_.status as status8_1_0_ from users users0_ where users0_.user_id=?
+2019-05-09 15:17:17.561 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [1] as [INTEGER] - [24]
+2019-05-09 15:17:17.563 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([first_na2_1_0_] : [VARCHAR]) - [Amimo]
+2019-05-09 15:17:17.563 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([id_no3_1_0_] : [VARCHAR]) - [26089909]
+2019-05-09 15:17:17.564 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([msisdn4_1_0_] : [VARCHAR]) - [254721506974]
+2019-05-09 15:17:17.564 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([password5_1_0_] : [VARCHAR]) - [$2a$04$I9Q2sDc4QGGg5WNTLmsz0.fvGv3OjoZyj81PrSFyGOqMphqfS2qKu]
+2019-05-09 15:17:17.565 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([registra6_1_0_] : [TIMESTAMP]) - [2019-05-09 15:17:17.204]
+2019-05-09 15:17:17.565 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([second_n7_1_0_] : [VARCHAR]) - [Benja]
+2019-05-09 15:17:17.566 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicExtractor                 : extracted value ([status8_1_0_] : [BOOLEAN]) - [true]
+2019-05-09 15:17:17.567 DEBUG afro-HP-ProBook-440-G5 --- [           main] o.h.SQL                                  : delete from users where user_id=?
+2019-05-09 15:17:17.571 TRACE afro-HP-ProBook-440-G5 --- [           main] o.h.t.d.s.BasicBinder                    : binding parameter [1] as [INTEGER] - [24]
+2019-05-09 15:17:17.592  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2019-05-09 15:17:17.593  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.t.w.s.TestDispatcherServlet          : Initializing Servlet ''
+2019-05-09 15:17:17.601  INFO afro-HP-ProBook-440-G5 --- [           main] o.s.t.w.s.TestDispatcherServlet          : Completed initialization in 7 ms
+2019-05-09 15:17:17.884  INFO afro-HP-ProBook-440-G5 --- [       Thread-6] o.s.s.c.ThreadPoolTaskExecutor           : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-05-09 15:17:17.906  INFO afro-HP-ProBook-440-G5 --- [       Thread-6] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-05-09 15:17:20.319  INFO afro-HP-ProBook-440-G5 --- [       Thread-6] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
+2019-05-09 15:17:20.335  INFO afro-HP-ProBook-440-G5 --- [       Thread-6] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.

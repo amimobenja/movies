@@ -22,14 +22,20 @@ import ke.co.safaricom.www.validators.UserValidator;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  *
@@ -85,7 +91,7 @@ public class MoviesController {
 
     }
     
-    @ApiOperation(value = "Send a Movie Request", notes = "Use this API to send a Movie Adding request. As specified in the documentation"
+    @ApiOperation(value = "Send Add Movie Request", notes = "Use this API to send a Movie Adding request. As specified in the documentation"
             + "note that some parameters are mandetory. Ensure that the mandetory parameters are provided and meet the specified parameter conditions. "
             + "NB: Mandetory parameters are highlighted with a red asterisk.")    
     @ApiResponses(value = {
@@ -108,13 +114,107 @@ public class MoviesController {
             UserDetails user = (UserDetails) auth.getPrincipal();
             
             moviesRequest.setAddDate(new Date());
+            moviesRequest.setTitle(moviesRequest.getTitle().toUpperCase().trim());
             moviesRequest.setAddedBy(user.getUsername());
             Movies savedMovie = moviesService.saveMovies(moviesRequest);
             response.setObject(savedMovie);
         }
 
         return new ResponseEntity<>(response, response.getHttpStatus());
+    }
+    
+    @ApiOperation(value = "Send Update Movie Request", notes = "Use this API to send a Movie updating request. As specified in the documentation"
+            + "note that some parameters are mandetory. Ensure that the mandetory parameters are provided and meet the specified parameter conditions. "
+            + "NB: Mandetory parameters are highlighted with a red asterisk.")    
+    @ApiResponses(value = {
+            @ApiResponse(code = 200, message = "Successful update movie request pushed for Processing.", response = Movies.class),
+            @ApiResponse(code = 400, message = "Empty, invalid parametes noted.", response = SwaggerDocErrorResponseMessages.class),
+            @ApiResponse(code = 401, message = "Access token expired.", response = SwaggerDocErrorResponseMessages.class),
+            @ApiResponse(code = 404, message = "Access credentials provided are not valid.", response = SwaggerDocErrorResponseMessages.class),
+            @ApiResponse(code = 409, message = "Conflict, an existing Request Id noted.", response = SwaggerDocErrorResponseMessages.class),
+            @ApiResponse(code = 417, message = "Provided parameters, do not match specified dependencies.", response = SwaggerDocErrorResponseMessages.class),
+            @ApiResponse(code = 500, message = "Internal server error") })
+    @PutMapping(value = "/update")
+    private ResponseEntity<ResponseWrapper> updateMovie(@RequestBody Movies moviesRequest) {
+        logger.info("MOVIE UPDATE REQUEST RECEIVED.");
+        MoviesValidator validate = new MoviesValidator();
+        ResponseWrapper response = validate.validateMovieRequest(moviesRequest, moviesService, PUT);
 
+        if (validate.isIsValid()) {
+              
+            Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+            UserDetails user = (UserDetails) auth.getPrincipal();
+            
+            moviesRequest.setMovieId(validate.getMovies().getMovieId());
+            moviesRequest.setUpdatedDate(new Date());
+            moviesRequest.setTitle(moviesRequest.getTitle().toUpperCase().trim());
+            moviesRequest.setUpdatedBy(user.getUsername());
+            
+            moviesService.saveMovies(moviesRequest);
+            
+            response.setObject(moviesService.searchMovieByTitle(moviesRequest.getTitle()));
+            response.setHttpStatus(HttpStatus.OK);
+            response.setResponseCode(HttpStatus.OK.value());
+            response.setResponseMessage(OBJECT_UPDATED_RESPONSE_MESSAGE);
+        }
+        return new ResponseEntity<>(response, response.getHttpStatus());
+    }
+    
+    @ApiOperation(value = "Send Delete Movie Request", notes = "Use this API to send a Movie Delete request. As specified in the documentation"
+            + "note that some parameters are mandetory. Ensure that the mandetory parameters are provided and meet the specified parameter conditions. "
+            + "NB: Mandetory parameters are highlighted with a red asterisk.")    
+    @ApiResponses(value = {
+            @ApiResponse(code = 200, message = "Successful update movie request pushed for Processing.", response = Movies.class),
+            @ApiResponse(code = 400, message = "Empty, invalid parametes noted.", response = SwaggerDocErrorResponseMessages.class),
+            @ApiResponse(code = 401, message = "Access token expired.", response = SwaggerDocErrorResponseMessages.class),
+            @ApiResponse(code = 404, message = "Access credentials provided are not valid.", response = SwaggerDocErrorResponseMessages.class),
+            @ApiResponse(code = 409, message = "Conflict, an existing Request Id noted.", response = SwaggerDocErrorResponseMessages.class),
+            @ApiResponse(code = 417, message = "Provided parameters, do not match specified dependencies.", response = SwaggerDocErrorResponseMessages.class),
+            @ApiResponse(code = 500, message = "Internal server error") })
+    @DeleteMapping(value = "/delete/{nameOfMovie}")
+    private ResponseEntity<ResponseWrapper> deleteMovie(@PathVariable("nameOfMovie") String nameOfMovie) {
+        logger.info("MOVIE UPDATE REQUEST RECEIVED.");
+        MoviesValidator validate = new MoviesValidator();
+        ResponseWrapper response = validate.validateMovieDeleteRequest(nameOfMovie, moviesService);
+
+        if (validate.isIsValid()) {
+              
+            Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+            UserDetails user = (UserDetails) auth.getPrincipal();
+            
+            Movies toDeleteMovie = validate.getMovies();
+            toDeleteMovie.setDeleteDate(new Date());
+            toDeleteMovie.setDeletedBy(user.getUsername());
+            toDeleteMovie.setDeleted(true);
+            
+            moviesService.saveMovies(toDeleteMovie);
+            
+            response.setObject(toDeleteMovie);
+            response.setHttpStatus(HttpStatus.OK);
+            response.setResponseCode(HttpStatus.OK.value());
+            response.setResponseMessage(OBJECT_DELETE_RESPONSE_MESSAGE);
+        }
+        return new ResponseEntity<>(response, response.getHttpStatus());
+    }
+    
+    @ApiOperation(value = "Send Get Movie Request", notes = "Use this API to send a Get Movies request. As specified in the documentation"
+            + "note that some parameters are mandetory. Ensure that the mandetory parameters are provided and meet the specified parameter conditions. "
+            + "NB: Mandetory parameters are highlighted with a red asterisk.")    
+    @ApiResponses(value = {
+            @ApiResponse(code = 200, message = "Successful get movie request pushed for Processing.", response = Movies.class),
+            @ApiResponse(code = 400, message = "Empty, invalid parametes noted.", response = SwaggerDocErrorResponseMessages.class),
+            @ApiResponse(code = 401, message = "Access token expired.", response = SwaggerDocErrorResponseMessages.class),
+            @ApiResponse(code = 404, message = "Access credentials provided are not valid.", response = SwaggerDocErrorResponseMessages.class),
+            @ApiResponse(code = 409, message = "Conflict, an existing Request Id noted.", response = SwaggerDocErrorResponseMessages.class),
+            @ApiResponse(code = 417, message = "Provided parameters, do not match specified dependencies.", response = SwaggerDocErrorResponseMessages.class),
+            @ApiResponse(code = 500, message = "Internal server error") })
+    @GetMapping(value = "/get/{filterValue}")
+    private ResponseEntity<ResponseWrapper> fetchMovies(@PathVariable("filterValue") String filterValue) {
+        logger.info("MOVIE GET REQUEST RECEIVED.");
+        MoviesValidator validate = new MoviesValidator();
+        ResponseWrapper response = validate.validateMovieRequest(filterValue.toUpperCase(), moviesService);
+
+        return new ResponseEntity<>(response, response.getHttpStatus());
     }
     
 }

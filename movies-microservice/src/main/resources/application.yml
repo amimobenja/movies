@@ -1,5 +1,8 @@
 ## YAML Template.
 app:
+    param:
+        min_rating: 1
+        max_rating: 5
     oauth2:
         params:
             client:

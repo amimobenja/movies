@@ -19,6 +19,8 @@ import org.springframework.http.HttpStatus;
  *
  * @author afro
  */
+
+
 public class UserValidator {
     
     private static final Logger logger = LogManager.getLogger(UserValidator.class);

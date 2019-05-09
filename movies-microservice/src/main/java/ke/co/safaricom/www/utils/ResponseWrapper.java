@@ -27,6 +27,13 @@ public class ResponseWrapper implements Serializable {
         this.object = "{}";
     }
 
+    public ResponseWrapper(int responseCode, String responseMessage, HttpStatus httpStatus, Object object) {
+        this.responseCode = responseCode;
+        this.responseMessage = responseMessage;
+        this.httpStatus = httpStatus;
+        this.object = object;
+    }
+
     public int getResponseCode() {
         return responseCode;
     }

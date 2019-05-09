@@ -9,6 +9,7 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.Serializable;
 import java.util.Date;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -59,6 +60,7 @@ public class Movies implements Serializable {
     
     @ApiModelProperty(notes = "The addedBy parameter is used to show who update the movies or series. "
             , required = true, example = "254721506974.")
+    @Column(updatable = false)
     private String addedBy;
     
     @ApiModelProperty(notes = "The updatedBy parameter is used to show who update the movies or series. "
@@ -70,6 +72,7 @@ public class Movies implements Serializable {
     private String deletedBy;
     
     @Temporal(javax.persistence.TemporalType.TIMESTAMP)
+    @Column(updatable = false)
     private Date addDate;
     
     @Temporal(javax.persistence.TemporalType.TIMESTAMP)

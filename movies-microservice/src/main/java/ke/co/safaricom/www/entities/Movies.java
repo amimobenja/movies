@@ -85,6 +85,13 @@ public class Movies implements Serializable {
         this.addDate = new Date();
         this.rating = 0;
     }
+
+    public Movies(String title) {
+        this.title = title;
+        this.addDate = new Date();
+        this.rating = 0;
+    }
+    
     
     public int getMovieId() {
         return movieId;

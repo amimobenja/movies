@@ -26,6 +26,7 @@ public class Constants {
     public static final String OBJECT_CREATED_RESPONSE_MESSAGE = "Successfully created.";
     public static final String FETCHED_RESPONSE_MESSAGE = "Fetched successfully.";
     public static final String OBJECT_UPDATED_RESPONSE_MESSAGE = "Successfully updated.";
+    public static final String ITERNAL_SERVER_ERROR_RESPONSE_MESSAGE = "Internal Server errror.";
     public static final String OBJECT_DELETE_RESPONSE_MESSAGE = "Successfully deleted.";
     public static final String PASSWORD_ENCRYPTION_RESPONSE_ERROR = "Password encryption error.";
     

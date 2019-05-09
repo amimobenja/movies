@@ -22,7 +22,7 @@ import javax.validation.constraints.NotNull;
  */
 @Entity
 @ApiModel(description = "Class representing a User Entity Body parameters.")
-public class Users  implements Serializable {
+public class Users implements Serializable {
     
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

@@ -37,38 +37,13 @@ public class UserValidator {
             return response;
         } 
 
-        if (users.getFirstName().isEmpty()) {
+        if (users.getFirstName().isEmpty() || users.getIdNo().isEmpty() || users.getPassword().isEmpty() || users.getSecondName().isEmpty()) {
             response.setHttpStatus(HttpStatus.BAD_REQUEST);
-            response.setResponseMessage(BAD_PARAMS_RESPONSE_MESSAGE);
+            response.setResponseMessage(EMPTY_PARAMS_RESPONSE_MESSAGE);
             response.setResponseCode(HttpStatus.BAD_REQUEST.value());
 
             return response;
-        }
-
-        if (users.getIdNo().isEmpty()) {
-            response.setHttpStatus(HttpStatus.BAD_REQUEST);
-            response.setResponseMessage(BAD_PARAMS_RESPONSE_MESSAGE);
-            response.setResponseCode(HttpStatus.BAD_REQUEST.value());
-
-            return response;
-        }
-
-        if (users.getPassword().isEmpty()) {
-            response.setHttpStatus(HttpStatus.BAD_REQUEST);
-            response.setResponseMessage(BAD_PARAMS_RESPONSE_MESSAGE);
-            response.setResponseCode(HttpStatus.BAD_REQUEST.value());
-
-            return response;
-        }
-
-        if (users.getSecondName().isEmpty()) {
-            response.setHttpStatus(HttpStatus.BAD_REQUEST);
-            response.setResponseMessage(BAD_PARAMS_RESPONSE_MESSAGE);
-            response.setResponseCode(HttpStatus.BAD_REQUEST.value());
-
-            return response;
-        }
-        
+        }        
         
         Users existingUser = userService.searchUser(msidn, users.getIdNo());
         

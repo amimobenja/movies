@@ -9,15 +9,23 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
+import java.util.Date;
+import ke.co.safaricom.www.entities.Movies;
 import ke.co.safaricom.www.entities.Users;
+import ke.co.safaricom.www.entities.services.MoviesService;
 import ke.co.safaricom.www.entities.services.UserService;
 import ke.co.safaricom.www.swagger.SwaggerDocErrorResponseMessages;
+import static ke.co.safaricom.www.utils.Constants.*;
 import ke.co.safaricom.www.utils.ResponseWrapper;
+import ke.co.safaricom.www.validators.MoviesValidator;
 import ke.co.safaricom.www.validators.UserValidator;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -39,10 +47,14 @@ public class MoviesController {
     private UserService userService;
 
     @Autowired
+    private MoviesService moviesService;
+
+    @Autowired
     private BCryptPasswordEncoder bCryptPasswordEncoder;
 
-    public MoviesController(UserService userService) {
+    public MoviesController(UserService userService, MoviesService moviesService) {
         this.userService = userService;
+        this.moviesService = moviesService;
     }
     
     @ApiOperation(value = "Send a User Request", notes = "Use this API to send a User Registration request. As specified in the documentation"
@@ -55,7 +67,7 @@ public class MoviesController {
             @ApiResponse(code = 409, message = "Conflict, an existing Request Id noted.", response = SwaggerDocErrorResponseMessages.class),
             @ApiResponse(code = 417, message = "Provided parameters, do not match specified dependencies.", response = SwaggerDocErrorResponseMessages.class),
             @ApiResponse(code = 500, message = "Internal server error") })
-    @PostMapping(value = "/client")
+    @PostMapping(value = "/register")
     private ResponseEntity<ResponseWrapper> registerUser(@RequestBody Users userRegistrationRequest) {
         logger.info("REGISTRATION REQUEST RECEIVED.");
         UserValidator validate = new UserValidator();
@@ -67,6 +79,38 @@ public class MoviesController {
             userRegistrationRequest.setMsisdn(msidn);
             Users savedUser = userService.saveUser(userRegistrationRequest);
             response.setObject(savedUser);
+        }
+
+        return new ResponseEntity<>(response, response.getHttpStatus());
+
+    }
+    
+    @ApiOperation(value = "Send a Movie Request", notes = "Use this API to send a Movie Adding request. As specified in the documentation"
+            + "note that some parameters are mandetory. Ensure that the mandetory parameters are provided and meet the specified parameter conditions. "
+            + "NB: Mandetory parameters are highlighted with a red asterisk.")    
+    @ApiResponses(value = {
+            @ApiResponse(code = 201, message = "Successful add movie request pushed for Processing.", response = Movies.class),
+            @ApiResponse(code = 400, message = "Empty, invalid parametes noted.", response = SwaggerDocErrorResponseMessages.class),
+            @ApiResponse(code = 401, message = "Access token expired.", response = SwaggerDocErrorResponseMessages.class),
+            @ApiResponse(code = 404, message = "Access credentials provided are not valid.", response = SwaggerDocErrorResponseMessages.class),
+            @ApiResponse(code = 409, message = "Conflict, an existing Request Id noted.", response = SwaggerDocErrorResponseMessages.class),
+            @ApiResponse(code = 417, message = "Provided parameters, do not match specified dependencies.", response = SwaggerDocErrorResponseMessages.class),
+            @ApiResponse(code = 500, message = "Internal server error") })
+    @PostMapping(value = "/add")
+    private ResponseEntity<ResponseWrapper> addMovie(@RequestBody Movies moviesRequest) {
+        logger.info("MOVIE ADDITION REQUEST RECEIVED.");
+        MoviesValidator validate = new MoviesValidator();
+        ResponseWrapper response = validate.validateMovieRequest(moviesRequest, moviesService, POST);
+
+        if (validate.isIsValid()) {
+              
+            Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+            UserDetails user = (UserDetails) auth.getPrincipal();
+            
+            moviesRequest.setAddDate(new Date());
+            moviesRequest.setAddedBy(user.getUsername());
+            Movies savedMovie = moviesService.saveMovies(moviesRequest);
+            response.setObject(savedMovie);
         }
 
         return new ResponseEntity<>(response, response.getHttpStatus());

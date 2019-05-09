@@ -13,7 +13,7 @@ import javax.persistence.Column;
  *
  * @author afro
  */
-@ApiModel(description = "Class representing an STK Push Error Response Body parameters.")
+@ApiModel(description = "Class representing an Movie Error Response Body parameters.")
 public class SwaggerDocErrorResponseMessages {
     @Column(name = "response_code")
     @ApiModelProperty(notes = "Mandetory responseCode parameter will be provided in the response", required = true, example = "400")

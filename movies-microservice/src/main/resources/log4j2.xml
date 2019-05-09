@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Spring Boot automatically configures Log4j if it finds a file named log4j2.xml 
+or log4j2.json or log4j2.yaml in the classpath. We’ll configure log4j 2 using XML.
+The above configuration defines a simple ConsoleAppender and declares two 
+loggers - an application specific logger and the the root logger.-->
+
+<Configuration status="WARN" monitorInterval="30">
+    <Properties>
+        <Property name="LOG_PATTERN">
+            %d{yyyy-MM-dd HH:mm:ss.SSS} %5p ${hostName} --- [%15.15t] %-40.40c{1.} : %m%n%ex
+        </Property>
+    </Properties>
+    <Appenders>
+        <Console name="ConsoleAppender" target="SYSTEM_OUT" follow="true">
+            <PatternLayout pattern="${LOG_PATTERN}"/>
+        </Console>
+        
+        <!-- Rolling File Appender -->
+        <RollingFile name="FileAppender" fileName="logs/movies.log" filePattern="logs/movies-%d{yyyy-MM-dd}-%i.log">
+            <PatternLayout>
+                <Pattern>${LOG_PATTERN}</Pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" />
+                <SizeBasedTriggeringPolicy size="10MB" />
+            </Policies>
+            <DefaultRolloverStrategy max="10"/>
+        </RollingFile>
+        
+        <!-- SMTP Appender is very useful in production systems when you want to be notified 
+        about any errors in your application via email. You can configure an SMTP appender 
+        to send ERROR emails to you using an SMTP server.
+        
+        Note that, for SMTP appender to work, you need to include spring-boot-starter-mail
+         dependency to your pom.xml
+         
+        <SMTP name="MailAppender"
+              subject="Log4j2 Demo [PROD]"
+              to="youremail@example.com"
+              from="airtel-reversals-alerts@example.com"
+              smtpHost="yourSMTPHost"
+              smtpPort="587"
+              smtpUsername="yourSMTPUsername"
+              smtpPassword="yourSMTPPassword"
+              bufferSize="1">
+            <ThresholdFilter level="ERROR" onMatch="ACCEPT" onMismatch="DENY"/>
+            <PatternLayout>
+                <Pattern>${LOG_PATTERN}</Pattern>
+            </PatternLayout>
+        </SMTP> -->
+        
+    </Appenders>
+    
+    <Loggers>
+        <!--Logger name="ke.co.safaricom.www" level="debug" additivity="false">
+            <AppenderRef ref="ConsoleAppender" />
+        </Logger-->
+        
+        <AsyncLogger name="ke.co.safaricom.www" level="debug"
+                     additivity="false">
+            <AppenderRef ref="ConsoleAppender" />
+            <AppenderRef ref="FileAppender" />
+        </AsyncLogger>
+        
+        <Root level="info">
+            <AppenderRef ref="ConsoleAppender" />            
+            <AppenderRef ref="FileAppender" />
+        </Root>
+    </Loggers>
+    
+</Configuration>
